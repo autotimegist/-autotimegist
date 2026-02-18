@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Privacy Policy - AutoTimegist | Your Data Protection & Privacy</title>
+    <meta name="title" content="Privacy Policy - AutoTimegist">
+    <meta name="description" content="Read AutoTimegist's Privacy Policy to understand how we collect, use, and protect your personal information. We are committed to safeguarding your privacy.">
+    <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, AutoTimegist privacy">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/privacy-policy">
+    <meta property="og:title" content="Privacy Policy - AutoTimegist">
+    <meta property="og:description" content="Read AutoTimegist's Privacy Policy to understand how we collect, use, and protect your personal information.">
+    <meta property="og:image" content="https://autotimegist.com/src/privacy-policy.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/privacy-policy">
+    <meta name="twitter:title" content="Privacy Policy - AutoTimegist">
+    <meta name="twitter:description" content="Your data protection and privacy at AutoTimegist.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/privacy-policy.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/privacy-policy">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://autotimegist.com/privacy-policy"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal privacy-policy-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Privacy Policy Content */
+        .privacy-container {
+            max-width: 1000px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .privacy-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .privacy-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .last-updated {
+            text-align: right;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .privacy-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .privacy-section h2 {
+            font-size: 1.6rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .privacy-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .privacy-section p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 0.5rem 0 1.2rem 1.5rem;
+            color: var(--text-light);
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-section strong {
+            color: var(--secondary-color);
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0284c7;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box i {
+            color: #0284c7;
+            margin-right: 0.5rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .data-table th {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .data-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            color: var(--text-light);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cookie-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .cookie-item {
+            flex: 1 1 200px;
+            background: var(--bg-light);
+            padding: 1.2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .cookie-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .cookie-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-option {
+            flex: 1 1 200px;
+            background: var(--bg-light);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-option i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-option h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-option p a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-option p a:hover {
+            color: var(--primary-color);
+        }
+
+        .print-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-light);
+            color: var(--secondary-color);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+            border: none;
+            font-family: inherit;
+        }
+
+        .print-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .privacy-hero h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-section {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="privacy-container">
+        <div class="privacy-hero">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy matters to us. Learn how we collect, use, and protect your information when you visit AutoTimegist.</p>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+            <i class="fas fa-print"></i> Print This Policy
+        </button>
+
+        <div class="last-updated">
+            Last Updated: February 18, 2026
+        </div>
+
+        <div class="privacy-section">
+            <h2>Introduction</h2>
+            <p>AutoTimegist ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://autotimegist.com/">https://autotimegist.com/</a> (the "Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+            <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Last Updated" date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Information We Collect</h2>
+            <p>We collect information from you when you visit our site, register on the site, place an order, subscribe to our newsletter, respond to a survey, fill out a form, or enter information on our site.</p>
+            
+            <h3>Personal Data</h3>
+            <p>While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:</p>
+            <ul>
+                <li>Email address</li>
+                <li>First name and last name</li>
+                <li>Phone number</li>
+                <li>Address, State, Province, ZIP/Postal code</li>
+                <li>Usage Data</li>
+            </ul>
+
+            <h3>Usage Data</h3>
+            <p>We may also collect information that your browser sends whenever you visit our Site. This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+
+            <h3>Cookies and Tracking Technologies</h3>
+            <p>We use cookies and similar tracking technologies to track the activity on our Site and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Types of Data Collected</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Category</th>
+                            <th>Examples</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Identity Data</strong></td>
+                            <td>First name, last name, username</td>
+                            <td>To personalize your experience and for communications</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contact Data</strong></td>
+                            <td>Email address, phone number, address</td>
+                            <td>To respond to inquiries and send newsletters</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical Data</strong></td>
+                            <td>IP address, browser type, time zone</td>
+                            <td>To improve our website and analyze trends</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Profile Data</strong></td>
+                            <td>Interests, preferences, feedback</td>
+                            <td>To tailor content and recommendations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marketing Data</strong></td>
+                            <td>Newsletter preferences</td>
+                            <td>To send relevant automotive news and offers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>How We Use Your Information</h2>
+            <p>We use the information we collect in the following ways:</p>
+            <ul>
+                <li><strong>To personalize your experience:</strong> Your information helps us better respond to your individual needs.</li>
+                <li><strong>To improve our website:</strong> We continually strive to improve our website offerings based on the information and feedback we receive from you.</li>
+                <li><strong>To improve customer service:</strong> Your information helps us more effectively respond to your customer service requests and support needs.</li>
+                <li><strong>To send periodic emails:</strong> The email address you provide may be used to send you information, respond to inquiries, and/or other requests or questions.</li>
+                <li><strong>To administer a contest, promotion, survey or other site feature.</strong></li>
+            </ul>
+
+            <div class="highlight-box">
+                <i class="fas fa-shield-alt"></i> <strong>Note:</strong> We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information without your consent, except as described in this policy.
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Cookies and Tracking</h2>
+            <p>We use cookies to understand and save your preferences for future visits and compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future.</p>
+            
+            <div class="cookie-grid">
+                <div class="cookie-item">
+                    <h4>Essential Cookies</h4>
+                    <p>Required for basic site functionality and security.</p>
+                </div>
+                <div class="cookie-item">
+                    <h4>Preference Cookies</h4>
+                    <p>Remember your settings and preferences.</p>
+                </div>
+                <div class="cookie-item">
+                    <h4>Analytics Cookies</h4>
+                    <p>Help us understand how visitors interact with our site.</p>
+                </div>
+                <div class="cookie-item">
+                    <h4>Marketing Cookies</h4>
+                    <p>Used to deliver relevant advertisements.</p>
+                </div>
+            </div>
+
+            <p>You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser settings. Each browser is a little different, so look at your browser's Help menu to learn the correct way to modify your cookies.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Third-Party Disclosure</h2>
+            <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential. We may also release information when it's release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property or safety.</p>
+            <p>However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Third-Party Links</h2>
+            <p>Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Data Security</h2>
+            <p>We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. All information you provide to us is stored on secure servers behind firewalls. Any payment transactions will be encrypted using SSL technology.</p>
+            <p>The safety and security of your information also depends on you. Where we have given you (or where you have chosen) a password for access to certain parts of our website, you are responsible for keeping this password confidential. We ask you not to share your password with anyone.</p>
+            <p>Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our website. Any transmission of personal information is at your own risk.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Your Data Protection Rights</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+            <ul>
+                <li><strong>The right to access:</strong> You have the right to request copies of your personal information from us.</li>
+                <li><strong>The right to rectification:</strong> You have the right to request that we correct any information you believe is inaccurate.</li>
+                <li><strong>The right to erasure:</strong> You have the right to request that we erase your personal information, under certain conditions.</li>
+                <li><strong>The right to restrict processing:</strong> You have the right to request that we restrict the processing of your personal information, under certain conditions.</li>
+                <li><strong>The right to object to processing:</strong> You have the right to object to our processing of your personal information, under certain conditions.</li>
+                <li><strong>The right to data portability:</strong> You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+            </ul>
+            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at the information provided below.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>GDPR Compliance (For EU Residents)</h2>
+            <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. AutoTimegist aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.</p>
+            <p>Our legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect it:</p>
+            <ul>
+                <li>We need to perform a contract with you</li>
+                <li>You have given us permission to do so</li>
+                <li>The processing is in our legitimate interests and it's not overridden by your rights</li>
+                <li>To comply with the law</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>CCPA Compliance (For California Residents)</h2>
+            <p>If you are a California resident, you have the right to request that we disclose what personal information we collect, use, and disclose about you. You also have the right to request that we delete your personal information, subject to certain exceptions. California residents have the right not to receive discriminatory treatment for exercising their privacy rights.</p>
+            <p>To exercise these rights, please contact us using the information below. We will verify your request using the information associated with your account or by requesting additional documentation.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Children's Privacy</h2>
+            <p>Our Service does not address anyone under the age of 13 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        </div>
+
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Optional: Add smooth scroll to anchor links within the page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

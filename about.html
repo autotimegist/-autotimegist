@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>About AutoTimegist - Expert Car Reviews & Automotive News | AutoTimegist</title>
+    <meta name="title" content="About AutoTimegist - Expert Car Reviews & Automotive News">
+    <meta name="description" content="Learn about AutoTimegist, your trusted source for professional car reviews, automotive news, expert buying guides, and maintenance tips since 2015.">
+    <meta name="keywords" content="about us, car review website, automotive news, expert reviewers, AutoTimegist team">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/about">
+    <meta property="og:title" content="About AutoTimegist - Expert Car Reviews & Automotive News">
+    <meta property="og:description" content="Learn about AutoTimegist, your trusted source for professional car reviews, automotive news, and expert buying guides since 2015.">
+    <meta property="og:image" content="https://autotimegist.com/src/about-us.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/about">
+    <meta name="twitter:title" content="About AutoTimegist - Expert Car Reviews & Automotive News">
+    <meta name="twitter:description" content="Your trusted source for professional car reviews and automotive news since 2015.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/about-us.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/about">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://autotimegist.com/about"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal about-page-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main About Content */
+        .about-container {
+            max-width: 1200px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .about-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .about-section p {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .values-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-item {
+            flex: 1 1 200px;
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-item h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .team-card {
+            flex: 1 1 280px;
+            max-width: 300px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .team-info .position {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .team-info .bio {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .team-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .team-social a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .team-social a:hover {
+            color: var(--primary-color);
+        }
+
+        .milestone-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .milestone {
+            flex: 1 1 150px;
+            text-align: center;
+        }
+
+        .milestone .year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .milestone .title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .milestone .desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-around;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .stat-block {
+            text-align: center;
+            flex: 1 1 150px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .contact-box {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-box i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-box h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-button:hover {
+            background: #c72e3a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
+
+            .about-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <div class="about-hero">
+            <h1>About AutoTimegist</h1>
+            <p>Your trusted source for professional car reviews, automotive news, expert buying guides, and maintenance tips since 2015.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Story</h2>
+            <p>AutoTimegist was founded in 2026 by a group of automotive journalists and engineers who shared a common frustration: too much car content was either superficial marketing fluff or overly technical jargon that left everyday drivers confused. We envisioned a platform that combined rigorous, professional testing with clear, helpful writing that actually answered the questions real car buyers have.</p>
+            <p>What started as a small blog run from a garage in Detroit has grown into one of the most trusted independent automotive resources online. We've tested over 800 vehicles, from affordable city cars to exotic supercars, and our reviews are read by millions of car shoppers every year. We've never accepted payment for positive reviews, and we never will. Our only allegiance is to our readers.</p>
+            <p>In 2026, we continue to expand our coverage to meet the rapidly changing automotive landscape. From the latest electric vehicles and hybrids to traditional gasoline-powered cars, we're here to help you make informed decisions.</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-block">
+                <div class="stat-number">800+</div>
+                <div class="stat-label">Vehicles Tested</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Expert Writers</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">2026</div>
+                <div class="stat-label">Founded</div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>To empower car buyers with honest, accurate, and accessible information. We believe that buying a car should be exciting, not stressful. Our reviews and guides cut through the marketing hype to give you the straight facts, helping you find the vehicle that truly fits your life and your budget.</p>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Unbiased</h3>
+                    <p>We don't accept payment for reviews. Our opinions are our own.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-flask"></i>
+                    <h3>Data-Driven</h3>
+                    <p>Our conclusions are backed by real-world testing and data.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Reader-First</h3>
+                    <p>We answer the questions real car buyers actually ask.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Forward-Looking</h3>
+                    <p>We're experts on EVs, hybrids, and the future of mobility.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Team</h2>
+            <p>Our writers and reviewers bring decades of combined experience from the automotive industry, engineering, and journalism. We're drivers, enthusiasts, and professionals who love cars as much as you do.</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://autotimegist.com/src/emmanuel-ik.webp" alt="Emmanuel IK">
+                    </div>
+                    <div class="team-info">
+                        <h3>Emmanuel IK</h3>
+                        <div class="position">Founder & Senior Editor</div>
+                        <div class="bio">Automotive journalist with 2 years of experience. Former engineer. Expert in EV technology and performance cars.</div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://autotimegist.com/src/charity-ozor.webp" alt="Charity Ozor">
+                    </div>
+                    <div class="team-info">
+                        <h3>Charity Ozor</h3>
+                        <div class="position">Buying Guide Editor</div>
+                        <div class="bio">Consumer advocate and financial analyst. Helps readers navigate incentives and total cost of ownership.</div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://autotimegist.com/src/cynthia-ebony.webp" alt="Cynthia Ebony">
+                    </div>
+                    <div class="team-info">
+                        <h3>Cynthia Ebony</h3>
+                        <div class="position">News Editor</div>
+                        <div class="bio">Breaking news and industry analysis. Tracks automaker strategy, policy changes, and market trends.</div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://autotimegist.com/src/blessing-ann.webp" alt="Blessing Ann">
+                    </div>
+                    <div class="team-info">
+                        <h3>Blessing Ann</h3>
+                        <div class="position">Maintenance Expert</div>
+                        <div class="bio">ASE-certified technician. Creates practical guides for EV and hybrid maintenance, battery care, and DIY tips.</div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://autotimegist.com/src/shedrack-olisa.webp" alt="Shedrack Olisa">
+                    </div>
+                    <div class="team-info">
+                        <h3>Shedrack Olisa</h3>
+                        <div class="position">Investigative Reporter</div>
+                        <div class="bio">Covers recalls, safety investigations, and regulatory policy. Digs deep into the stories that matter.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        </div>
+
+        <div class="contact-box">
+            <i class="fas fa-envelope-open-text"></i>
+            <h3>Get in Touch</h3>
+            <p>Have a question, tip, or feedback? We'd love to hear from you. Reach out to our team anytime.</p>
+            <a href="https://autotimegist.com/contact" class="contact-button">Contact Us</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Car Comparisons - Side-by-Side Expert Analysis | AutoTimegist</title>
+    <meta name="title" content="Car Comparisons - Side-by-Side Expert Analysis | AutoTimegist">
+    <meta name="description" content="In-depth car comparisons and head-to-head analysis. Compare the latest models from Tesla, BMW, Honda, Toyota, and more to find the perfect vehicle for your needs.">
+    <meta name="keywords" content="car comparisons, vehicle showdown, side-by-side comparison, Tesla vs BMW, Honda vs Toyota, EV vs Hybrid">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/comparisons">
+    <meta property="og:title" content="Car Comparisons - Side-by-Side Expert Analysis | AutoTimegist">
+    <meta property="og:description" content="In-depth car comparisons and head-to-head analysis. Compare the latest models from Tesla, BMW, Honda, Toyota, and more.">
+    <meta property="og:image" content="https://autotimegist.com/src/comparisons-page.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/comparisons">
+    <meta name="twitter:title" content="Car Comparisons - Side-by-Side Expert Analysis">
+    <meta name="twitter:description" content="In-depth car comparisons and head-to-head analysis.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/comparisons-page.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/comparisons">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://autotimegist.com/comparisons"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal comparisons-page-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Comparisons Content */
+        .comparisons-container {
+            max-width: 1400px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .comparisons-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparisons-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .comparisons-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .vs-featured {
+            background: linear-gradient(135deg, #f5f0e7, #e8e0d5);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .vs-featured-content {
+            flex: 2 1 300px;
+        }
+
+        .vs-featured-content h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .vs-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .vs-featured-image {
+            flex: 1 1 300px;
+            height: 200px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-tab {
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .filter-tab:hover, .filter-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .filter-select {
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            background: var(--white);
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .comparisons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            position: relative;
+            height: 180px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        .car-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition);
+        }
+
+        .car-image.left {
+            border-right: 2px solid var(--white);
+        }
+
+        .vs-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.3rem;
+            z-index: 3;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .card-meta i {
+            margin-right: 0.3rem;
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .card-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .card-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .quick-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        .stat-block {
+            flex: 1 1 80px;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .stat-value.winner {
+            color: var(--primary-color);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+
+        .card-author {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .card-author a {
+            color: var(--text-light);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-color);
+        }
+
+        .card-author a:hover {
+            color: var(--primary-color);
+        }
+
+        .pagination {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .page-btn.next {
+            width: auto;
+            padding: 0 1.2rem;
+            border-radius: 30px;
+        }
+
+        .quick-comparison-tool {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .tool-content {
+            flex: 2 1 300px;
+        }
+
+        .tool-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-content p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .tool-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .tool-btn:hover {
+            background: #c72e3a;
+            transform: translateY(-2px);
+        }
+
+        .tool-image {
+            flex: 1 1 200px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 3rem;
+        }
+
+        .newsletter-signup {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-signup h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-signup p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1 1 250px;
+            padding: 1rem;
+            border: none;
+            border-radius: 40px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #c72e3a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .comparisons-hero h1 {
+                font-size: 2rem;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+                border-radius: 20px;
+            }
+
+            .comparisons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-header {
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comparisons-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="comparisons-container">
+        <div class="comparisons-hero">
+            <h1>Car Comparisons</h1>
+            <p>Side-by-side expert analysis of the most popular and competing vehicles. We help you decide which one comes out on top.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <!-- <div class="filter-bar">
+            <div class="filter-tabs">
+                <button class="filter-tab active">All</button>
+                <button class="filter-tab">Sedans</button>
+                <button class="filter-tab">SUVs</button>
+                <button class="filter-tab">Trucks</button>
+                <button class="filter-tab">Electric</button>
+                <button class="filter-tab">Hybrid</button>
+                <button class="filter-tab">Luxury</button>
+            </div>
+            <select class="filter-select">
+                <option>Latest First</option>
+                <option>Most Popular</option>
+                <option>Highest Rated</option>
+            </select>
+        </div> -->
+
+        <!-- Featured Comparison -->
+        <div class="vs-featured">
+            <div class="vs-featured-content">
+                <span class="vs-badge">HEAD-TO-HEAD CHAMPIONS</span>
+                <h2>Honda Civic Hybrid vs Toyota Camry Hybrid 2026</h2>
+                <p>Two of the best hybrid sedans go head-to-head. Which one comes out on top for fuel economy, performance, and value?</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://autotimegist.com/honda-civic-hybrid-vs-toyota-camry-hybrid-2026" class="read-more">Read Full Comparison <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="vs-featured-image" style="background-image: url('https://autotimegist.com/src/honda-civic-vs-toyota-camry-hybrid-2026.webp');"></div>
+        </div>
+
+        <!-- Comparisons Grid -->
+        <div class="comparisons-grid">
+            <!-- 1. Honda Civic vs Toyota Camry Hybrid 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/honda-civic-vs-toyota-camry-hybrid-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/honda-civic-hybrid-vs-toyota-camry-hybrid-2026">Honda Civic Hybrid vs Toyota Camry Hybrid 2026</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Honda Civic Hybrid and Toyota Camry Hybrid side by side. Price, fuel economy, power, interior space, and expert ratings.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">MPG (Civic)</div>
+                            <div class="stat-value">49</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">MPG (Camry)</div>
+                            <div class="stat-value winner">51</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">0-60</div>
+                            <div class="stat-value winner">6.2s</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/honda-civic-hybrid-vs-toyota-camry-hybrid-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Tesla Model Y vs Kia EV9 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/tesla-model-y-vs-kia-ev9-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026">Tesla Model Y vs Kia EV9 2026: Best Electric SUV</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Tesla Model Y and Kia EV9 side by side. Range, charging, performance, space, and pricing. Which electric SUV is best?</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Range (Y)</div>
+                            <div class="stat-value winner">391 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Range (EV9)</div>
+                            <div class="stat-value">305 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">3rd Row</div>
+                            <div class="stat-value winner">EV9</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Ford F-150 Hybrid vs Lightning 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/ford-f150-hybrid-vs-lightning-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/ford-f150-hybrid-vs-lightning-2026">Ford F-150 Hybrid vs Lightning 2026: Gas vs Electric</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Ford F-150 PowerBoost Hybrid and F-150 Lightning electric truck. Towing, payload, range, cost of ownership, and expert verdict.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Towing</div>
+                            <div class="stat-value winner">12.7k lbs</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">0-60</div>
+                            <div class="stat-value winner">4.0s</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/ford-f150-hybrid-vs-lightning-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. BMW iX vs Lexus RZ 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/bmw-ix-vs-lexus-rz-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/bmw-ix-vs-lexus-rz-2026">BMW iX vs Lexus RZ 2026: Luxury EV Showdown</a></h3>
+                    <p class="card-excerpt">Compare the 2026 BMW iX and Lexus RZ side by side. Range, performance, luxury, pricing, and which premium electric SUV is right for you.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Range</div>
+                            <div class="stat-value winner">364 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Price</div>
+                            <div class="stat-value winner">$47k</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/bmw-ix-vs-lexus-rz-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Hyundai Ioniq 5 vs 6 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/hyundai-ioniq-5-vs-6-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/hyundai-ioniq-5-vs-6-2026">Hyundai Ioniq 5 vs 6 2026: Which One to Buy</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Hyundai Ioniq 5 and Ioniq 6 side by side. Range, performance, cargo space, pricing, and expert verdict.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Range</div>
+                            <div class="stat-value winner">423 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Cargo</div>
+                            <div class="stat-value winner">58.5 cu ft</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/hyundai-ioniq-5-vs-6-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Kia EV6 vs Hyundai Ioniq 5 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/kia-ev6-vs-hyundai-ioniq-5-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/kia-ev6-vs-hyundai-ioniq-5-2026">Kia EV6 vs Hyundai Ioniq 5 2026: Sister Cars Battle</a></h3>
+                    <p class="card-excerpt">Both share the same E-GMP platform and 84kWh battery, but differ in design, practicality, driving feel, and price. Which one wins?</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Range</div>
+                            <div class="stat-value winner">362 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Cargo</div>
+                            <div class="stat-value winner">27.2 cu ft</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/kia-ev6-vs-hyundai-ioniq-5-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Tesla Model 3 vs BMW i4 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/tesla-model-3-vs-bmw-i4-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/tesla-model-3-vs-bmw-i4-2026">Tesla Model 3 vs BMW i4 2026: Performance EVs</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Tesla Model 3 and BMW i4 side by side. Performance, range, charging, interior, and value. Which electric sport sedan is right for you?</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Range</div>
+                            <div class="stat-value winner">466 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">0-60</div>
+                            <div class="stat-value winner">2.9s</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/tesla-model-3-vs-bmw-i4-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Toyota RAV4 Hybrid vs Grand Highlander 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/toyota-rav4-vs-grand-highlander-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/toyota-rav4-vs-grand-highlander-2026">Toyota RAV4 Hybrid vs Grand Highlander 2026</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Toyota RAV4 Hybrid and Grand Highlander Hybrid side by side. Space, fuel economy, power, and price for your family.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">MPG</div>
+                            <div class="stat-value winner">38-44</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Seats</div>
+                            <div class="stat-value winner">7-8</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/toyota-rav4-vs-grand-highlander-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Ford Mach-E vs Chevy Equinox EV 2026 -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/ford-mach-e-vs-chevy-equinox-ev-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/ford-mach-e-vs-chevy-equinox-ev-2026">Ford Mach-E vs Chevy Equinox EV 2026 Comparison</a></h3>
+                    <p class="card-excerpt">Compare the 2026 Ford Mustang Mach-E and Chevrolet Equinox EV side by side. Price, range, performance, charging, and cargo space.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Range</div>
+                            <div class="stat-value winner">319 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Price</div>
+                            <div class="stat-value winner">$34,995</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/ford-mach-e-vs-chevy-equinox-ev-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. 2026 Hybrid vs Electric -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/hybrid-vs-electric-savings-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/hybrid-vs-electric-savings-2026">2026 Hybrid vs Electric: Which Powertrain Saves More</a></h3>
+                    <p class="card-excerpt">Real cost comparison of 2026 hybrid vs electric vehicles. Purchase price, fuel savings, depreciation, and total cost of ownership.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">Fuel Cost</div>
+                            <div class="stat-value winner">$0.04/mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">5-year</div>
+                            <div class="stat-value winner">$13k saved</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/hybrid-vs-electric-savings-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. 2026 EV Range Comparison -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/tesla-model-y-vs-kia-ev9-2026.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026">2026 EV Range Comparison: Real-World Testing Results</a></h3>
+                    <p class="card-excerpt">Independent real-world EV range tests for 2026. Compare highway, winter, and mixed-driving results for Tesla, Hyundai, Kia, and more.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">WLTP Leader</div>
+                            <div class="stat-value winner">466 mi</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">Winter Loss</div>
+                            <div class="stat-value winner">25%</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. 2026 Hybrid vs Electric vs PHEV -->
+            <div class="comparison-card">
+                <div class="card-header">
+                    <div class="car-image left" style="background-image: url('https://autotimegist.com/src/phev-vs-hybrid-vs-ev-2026-guide.webp');"></div>
+                    <div class="vs-center">VS</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/phev-vs-hybrid-vs-ev-2026-guide">2026 PHEV vs Hybrid vs EV: Complete Buyer's Guide</a></h3>
+                    <p class="card-excerpt">Break down 2026 PHEVs, standard hybrids, and EVs. Compare costs, charging needs, range, and real-world data to find your perfect match.</p>
+                    <div class="quick-stats">
+                        <div class="stat-block">
+                            <div class="stat-label">EV Savings</div>
+                            <div class="stat-value winner">$11k</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-label">PHEV Range</div>
+                            <div class="stat-value winner">44 mi</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/phev-vs-hybrid-vs-ev-2026-guide" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <!-- <div class="pagination">
+            <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn"><i class="fas fa-ellipsis-h"></i></a>
+            <a href="#" class="page-btn next">Next <i class="fas fa-chevron-right"></i></a>
+        </div> -->
+
+        <!-- Quick Comparison Tool -->
+        <!-- <div class="quick-comparison-tool">
+            <div class="tool-content">
+                <h2>Can't Decide Between Two Cars?</h2>
+                <p>Use our quick comparison tool to see how any two vehicles stack up against each other in our key categories.</p>
+                <a href="#" class="tool-btn">Launch Comparison Tool</a>
+            </div>
+            <div class="tool-image">
+                <i class="fas fa-scale-balanced"></i>
+            </div>
+        </div> -->
+
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup">
+            <h2>Never Miss a Showdown</h2>
+            <p>Get the latest car comparisons delivered straight to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                newsletterForm.reset();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Filter tabs
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Automotive News - Latest Industry Updates & Breaking Stories | AutoTimegist</title>
+    <meta name="title" content="Automotive News - Latest Industry Updates & Breaking Stories | AutoTimegist">
+    <meta name="description" content="Stay informed with the latest automotive news, breaking stories, and industry analysis. From recalls and earnings to technology breakthroughs and market trends.">
+    <meta name="keywords" content="automotive news, car industry, breaking news, auto recalls, earnings reports, EV news, autonomous vehicles">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/news">
+    <meta property="og:title" content="Automotive News - Latest Industry Updates & Breaking Stories | AutoTimegist">
+    <meta property="og:description" content="Stay informed with the latest automotive news, breaking stories, and industry analysis.">
+    <meta property="og:image" content="https://autotimegist.com/src/news-page.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/news">
+    <meta name="twitter:title" content="Automotive News - Latest Industry Updates & Breaking Stories">
+    <meta name="twitter:description" content="Stay informed with the latest automotive news.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/news-page.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/news">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "News",
+            "item": "https://autotimegist.com/news"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal news-page-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main News Content */
+        .news-container {
+            max-width: 1400px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .news-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .news-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .breaking-ticker {
+            background: linear-gradient(135deg, var(--primary-color), #b91c1c);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            margin: 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .breaking-label {
+            background: white;
+            color: var(--primary-color);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .breaking-text {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .breaking-text i {
+            margin-right: 0.5rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-tab {
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .filter-tab:hover, .filter-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .filter-select {
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            background: var(--white);
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .featured-news {
+            background: linear-gradient(135deg, #f5f0e7, #e8e0d5);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .featured-image {
+            flex: 1 1 300px;
+            height: 220px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .featured-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .featured-content {
+            flex: 2 1 300px;
+        }
+
+        .featured-content h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .featured-meta i {
+            color: var(--primary-color);
+            margin-right: 0.3rem;
+        }
+
+        .featured-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-breaking {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .card-meta i {
+            margin-right: 0.3rem;
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .card-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .card-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .card-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+            background: var(--bg-light);
+            padding: 0.8rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+
+        .card-stats span {
+            flex: 1;
+        }
+
+        .card-stats i {
+            color: var(--primary-color);
+            margin-right: 0.3rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+
+        .card-author {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .card-author a {
+            color: var(--text-light);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-color);
+        }
+
+        .card-author a:hover {
+            color: var(--primary-color);
+        }
+
+        .pagination {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .page-btn.next {
+            width: auto;
+            padding: 0 1.2rem;
+            border-radius: 30px;
+        }
+
+        .newsletter-signup {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-signup h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-signup p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1 1 250px;
+            padding: 1rem;
+            border: none;
+            border-radius: 40px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #c72e3a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .news-hero h1 {
+                font-size: 2rem;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+                border-radius: 20px;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .breaking-ticker {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .news-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="news-container">
+        <div class="news-hero">
+            <h1>Automotive News</h1>
+            <p>Breaking stories, industry analysis, and the latest updates from the world of cars. Stay informed with AutoTimegist.</p>
+        </div>
+
+        <!-- Breaking News Ticker -->
+        <div class="breaking-ticker">
+            <span class="breaking-label">BREAKING</span>
+            <span class="breaking-text"><i class="fas fa-exclamation-circle"></i> BMW recalls 575,000 vehicles over starter motor fire risk affecting 3 Series, 4 Series, X3 and Toyota Supra</span>
+        </div>
+
+        <!-- Filter Bar -->
+        <!-- <div class="filter-bar">
+            <div class=" filter-tabs">
+                <button class="filter-tab active">All News</button>
+                <button class="filter-tab">Recalls</button>
+                <button class="filter-tab">Earnings</button>
+                <button class="filter-tab">Industry Trends</button>
+                <button class="filter-tab">Technology</button>
+                <button class="filter-tab">Policy</button>
+                <button class="filter-tab">Market Analysis</button>
+            </div>
+            <select class="filter-select">
+                <option>Latest First</option>
+                <option>Most Read</option>
+                <option>Oldest First</option>
+            </select>
+        </div> -->
+
+        <!-- Featured News (BMW Recall) -->
+        <div class="featured-news">
+            <div class="featured-image" style="background-image: url('https://autotimegist.com/src/bmw-recall-87000-engine-starter-fire-risk.webp');">
+                <span class="featured-category">BREAKING RECALL</span>
+            </div>
+            <div class="featured-content">
+                <span class="featured-badge">URGENT</span>
+                <h2>BMW Recalls 90,000 Vehicles Over Engine Starter Fire Risk - NHTSA Investigation</h2>
+                <div class="featured-meta">
+                    <span><i class="far fa-calendar"></i> February 18, 2026</span>
+                    <span><i class="far fa-user"></i> Shedrack Olisa</span>
+                </div>
+                <p class="featured-excerpt">BMW issues a wide-ranging recall after investigations link starter motor wear to a potential fire risk across multiple models, including the 3 Series, 4 Series, X3, X4, and even the Toyota Supra. Over 575,000 vehicles affected globally, 87,394 in the U.S.</p>
+                <div>
+                    <a href="https://autotimegist.com/bmw-recall-87000-engine-starter-fire-risk" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Grid -->
+        <div class="news-grid">
+            <!-- 1. BMW Recall -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/bmw-recall-87000-engine-starter-fire-risk.webp');">
+                    <span class="card-breaking">BREAKING</span>
+                    <span class="card-category">Recall</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/bmw-recall-87000-engine-starter-fire-risk">BMW Recalls 90,000 Vehicles Over Engine Starter Fire Risk</a></h3>
+                    <p class="card-excerpt">NHTSA investigation leads to recall of 87,394 U.S. vehicles including 3 Series, X3, and Toyota Supra due to starter overheating fire risk.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-car"></i> 87,394 U.S. vehicles</span>
+                        <span><i class="fas fa-fire"></i> Fire risk</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/bmw-recall-87000-engine-starter-fire-risk" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Solid-State Battery Breakthrough -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/solid-state-battery-breakthrough-quantumscape-factorial-milestones.webp');">
+                    <span class="card-category">Technology</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/solid-state-battery-breakthrough-quantumscape-factorial-milestones">Solid-State Battery Breakthrough: QuantumScape and Factorial Reach Production Milestones</a></h3>
+                    <p class="card-excerpt">QuantumScape inaugurates Eagle Line pilot production, Factorial partners with Karma for first U.S. passenger vehicle solid-state battery program.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-bolt"></i> 1,000+ km range</span>
+                        <span><i class="fas fa-calendar"></i> 2027 production</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/solid-state-battery-breakthrough-quantumscape-factorial-milestones" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Honda Profit Plunge -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/honda-net-profit-falls-42-percent-ev-losses-trump-tariffs.webp');">
+                    <span class="card-category">Earnings</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/honda-net-profit-falls-42-percent-ev-losses-trump-tariffs">Honda Net Profit Falls 42% as EV Losses and Trump Tariffs Hit Automaker Hard</a></h3>
+                    <p class="card-excerpt">Honda reports 42% profit drop, hit by ¥267.1 billion in EV-related impairments and ¥289.8 billion in U.S. tariff costs.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-chart-line"></i> -42% profit</span>
+                        <span><i class="fas fa-industry"></i> ¥267B EV loss</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/honda-net-profit-falls-42-percent-ev-losses-trump-tariffs" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Ford Earnings Miss -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/ford-earnings-miss-2026-forecast.webp');">
+                    <span class="card-category">Earnings</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/ford-earnings-miss-2026-forecast">Ford Earnings Miss Forecasts, CEO Promises Stronger Recovery in 2026</a></h3>
+                    <p class="card-excerpt">Ford Q4 core profit plunges 50% to $1B, missing estimates. CEO Jim Farley projects stronger 2026 with $8B-$10B EBIT.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-dollar-sign"></i> $0.13 EPS vs $0.19</span>
+                        <span><i class="fas fa-tag"></i> $8-10B 2026 guide</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/ford-earnings-miss-2026-forecast" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. German Auto Crisis -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/german-auto-investment-cuts-crisis.webp');">
+                    <span class="card-category">Industry Trends</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/german-auto-investment-cuts-crisis">German Auto Companies Abandon Germany: 72% Plan Investment Cuts Due to High Costs</a></h3>
+                    <p class="card-excerpt">VDA survey reveals 72% of German auto suppliers plan to cut domestic investment. Energy costs, bureaucracy drive exodus.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-chart-line"></i> 72% cut investment</span>
+                        <span><i class="fas fa-users"></i> 78k jobs at risk</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/german-auto-investment-cuts-crisis" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Toyota Highlander EV -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/toyota-2027-highlander-all-electric.webp');">
+                    <span class="card-category">Product News</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/toyota-2027-highlander-all-electric">Toyota 2027 Highlander Goes All-Electric: Gas and Hybrid Models Discontinued</a></h3>
+                    <p class="card-excerpt">Toyota confirms the 2027 Highlander will be all-electric only, dropping gas and hybrid options. Up to 338 hp, 320-mile range.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-bolt"></i> 320 mi range</span>
+                        <span><i class="fas fa-calendar"></i> Late 2026 arrival</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/toyota-2027-highlander-all-electric" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Cox Automotive Forecast -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/cox-automotive-us-car-sales-drop-2026.webp');">
+                    <span class="card-category">Market Analysis</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/cox-automotive-us-car-sales-drop-2026">Cox Automotive: US Car Sales to Drop 2.4% in 2026 Amid Affordability Crisis</a></h3>
+                    <p class="card-excerpt">Cox forecasts US new-vehicle sales to dip 2.4% to 15.8 million. Rising prices, insurance costs squeeze middle-income buyers.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-chart-line"></i> -2.4% sales</span>
+                        <span><i class="fas fa-tag"></i> 15.8M units</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/cox-automotive-us-car-sales-drop-2026" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Mazda CX-90 Investigation -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/mazda-cx-90-investigation-sticky-steering.webp');">
+                    <span class="card-category">Recall</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/mazda-cx-90-investigation-sticky-steering">Mazda CX-90 Under Federal Investigation After Recall Fails to Fix Sticky Steering</a></h3>
+                    <p class="card-excerpt">NHTSA investigates 43,752 Mazda CX-90 SUVs after 26 complaints and two crashes linked to 'sticky steering' that persists post-recall.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-car"></i> 43,752 vehicles</span>
+                        <span><i class="fas fa-exclamation-triangle"></i> 26 complaints</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/mazda-cx-90-investigation-sticky-steering" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Tesla Model S/X Discontinued -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/tesla-model-s-x-discontinued-confirmed.webp');">
+                    <span class="card-category">Product News</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/tesla-model-s-x-discontinued-confirmed">Tesla Model S and Model X to Be Discontinued Soon, Elon Musk Confirms</a></h3>
+                    <p class="card-excerpt">Musk confirms Tesla will end production of the Model S and Model X in Q2 2026. Fremont factory to be retooled for Optimus robot.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-calendar"></i> Q2 2026 end</span>
+                        <span><i class="fas fa-chart-line"></i> ~3% of sales</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/tesla-model-s-x-discontinued-confirmed" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Waymo Child Accident -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/waymo-child-accident-nhtsa-investigation.webp');">
+                    <span class="card-breaking">BREAKING</span>
+                    <span class="card-category">Safety</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/waymo-child-accident-nhtsa-investigation">Waymo Hits Child Near Elementary School - NHTSA Opens Safety Investigation</a></h3>
+                    <p class="card-excerpt">Waymo robotaxi strikes child in Santa Monica near elementary school, triggering NHTSA investigation into AV behavior in school zones.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-car"></i> 17 mph → 6 mph</span>
+                        <span><i class="fas fa-clock"></i> Jan 23, 2026</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/waymo-child-accident-nhtsa-investigation" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Trump EPA Revokes Emissions Rules -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/trump-epa-revokes-endangerment-finding.webp');">
+                    <span class="card-category">Policy</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/trump-epa-revokes-endangerment-finding">Trump EPA Revokes Emissions Rules: Major Setback for Climate Regulation</a></h3>
+                    <p class="card-excerpt">Trump administration revokes EPA's 2009 'endangerment finding,' eliminating legal basis for federal climate regulations including vehicle emissions standards.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-calendar"></i> Feb 12, 2026</span>
+                        <span><i class="fas fa-gavel"></i> $1.3T claimed savings</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/trump-epa-revokes-endangerment-finding" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Hyundai Inster Review -->
+            <div class="news-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/hyundai-inster-electric-city-car-review.webp');">
+                    <span class="card-category">Review</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 18, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/hyundai-inster-electric-city-car-review">Hyundai Inster Electric City Car Review: Affordable EV Game Changer for 2026</a></h3>
+                    <p class="card-excerpt">The 2026 Hyundai Inster proves affordable EVs can be spacious, stylish, and practical. Up to 370 km range, V2L capability, and sliding rear seats.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-bolt"></i> 370 km range</span>
+                        <span><i class="fas fa-tag"></i> from $35,000</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/hyundai-inster-electric-city-car-review" class="read-more">Read News <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <!-- <div class="pagination">
+            <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn">4</a>
+            <a href="#" class="page-btn">5</a>
+            <a href="#" class="page-btn"><i class="fas fa-ellipsis-h"></i></a>
+            <a href="#" class="page-btn next">Next <i class="fas fa-chevron-right"></i></a>
+        </div> -->
+
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup">
+            <h2>Never Miss a Story</h2>
+            <p>Get the latest automotive news delivered straight to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                newsletterForm.reset();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Filter tabs
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

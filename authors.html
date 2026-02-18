@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Our Authors - Meet the AutoTimegist Expert Team | AutoTimegist</title>
+    <meta name="title" content="Our Authors - Meet the AutoTimegist Expert Team | AutoTimegist">
+    <meta name="description" content="Meet the team of automotive experts behind AutoTimegist. Our writers bring decades of combined experience in car reviews, industry news, comparisons, buying guides, and maintenance tips.">
+    <meta name="keywords" content="AutoTimegist authors, car review experts, automotive journalists, industry analysts, car care specialists">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/authors">
+    <meta property="og:title" content="Our Authors - Meet the AutoTimegist Expert Team | AutoTimegist">
+    <meta property="og:description" content="Meet the team of automotive experts behind AutoTimegist. Our writers bring decades of combined experience in car reviews, industry news, comparisons, buying guides, and maintenance tips.">
+    <meta property="og:image" content="https://autotimegist.com/src/authors-page.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/authors">
+    <meta name="twitter:title" content="Our Authors - Meet the AutoTimegist Expert Team">
+    <meta name="twitter:description" content="Meet the team of automotive experts behind AutoTimegist.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/authors-page.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/authors">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Authors",
+            "item": "https://autotimegist.com/authors"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal authors-page-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Authors Content */
+        .authors-container {
+            max-width: 1400px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .authors-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .authors-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .authors-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .team-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0 3rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .author-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            padding: 2rem 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .author-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--white);
+            margin-bottom: 1rem;
+            border: 4px solid var(--white);
+            overflow: hidden;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .author-title {
+            font-size: 0.9rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-bio {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .author-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta-item {
+            background: var(--bg-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .meta-item i {
+            color: var(--primary-color);
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-tag {
+            background: var(--bg-light);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .recent-articles {
+            margin-bottom: 1.5rem;
+        }
+
+        .recent-articles h4 {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .article-preview {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .article-preview a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .article-preview a:hover {
+            color: var(--primary-color);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .profile-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .profile-link:hover {
+            gap: 0.8rem;
+        }
+
+        .author-social {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .author-social a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .author-social a:hover {
+            color: var(--primary-color);
+        }
+
+        .pagination {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .page-btn.next {
+            width: auto;
+            padding: 0 1.2rem;
+            border-radius: 30px;
+        }
+
+        .join-team {
+            background: linear-gradient(135deg, var(--bg-light), #e0e0e0);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .join-team h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .join-team p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .join-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .join-btn:hover {
+            background: #c72e3a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .authors-hero h1 {
+                font-size: 2rem;
+            }
+
+            .authors-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-header {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .authors-container {
+                padding: 0 1rem;
+            }
+
+            .stat-item {
+                min-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="authors-container">
+        <div class="authors-hero">
+            <h1>Our Expert Authors</h1>
+            <p>Meet the team of automotive journalists, engineers, and enthusiasts behind AutoTimegist. Together, they bring decades of experience to help you make informed decisions.</p>
+        </div>
+
+        <!-- Team Stats -->
+        <div class="team-stats">
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Expert Writers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">800+</div>
+                <div class="stat-label">Vehicles Tested</div>
+            </div>
+        </div>
+
+        <!-- Authors Grid -->
+        <div class="authors-grid">
+            <!-- Emmanuel IK -->
+            <div class="author-card">
+                <div class="card-header">
+                    <div class="author-avatar">
+                        <img src="https://autotimegist.com/src/emmanuel-ik.webp" alt="Emmanuel IK">
+                    </div>
+                    <div class="author-name">Emmanuel IK</div>
+                    <div class="author-title">Senior Editor</div>
+                </div>
+                <div class="card-content">
+                    <p class="author-bio">With 2 years of experience in automotive journalism and an engineering background, Emmanuel specializes in EV technology and performance car reviews.</p>
+                    <div class="author-meta">
+                        <span class="meta-item"><i class="fas fa-car"></i> 200+ tested</span>
+                        <span class="meta-item"><i class="fas fa-star"></i> 9.1 avg</span>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">Electric Vehicles</span>
+                        <span class="expertise-tag">Performance Cars</span>
+                        <span class="expertise-tag">Luxury SUVs</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/authors/emmanuel-ik" class="profile-link">Full Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charity Ozor -->
+            <div class="author-card">
+                <div class="card-header">
+                    <div class="author-avatar">
+                        <img src="https://autotimegist.com/src/charity-ozor.webp" alt="Charity Ozor">
+                    </div>
+                    <div class="author-name">Charity Ozor</div>
+                    <div class="author-title">Buying Guide Editor</div>
+                </div>
+                <div class="card-content">
+                    <p class="author-bio">A consumer advocate and financial analyst, Charity specializes in hybrid vs EV comparisons, tax incentives, and total cost of ownership analysis.</p>
+                    <div class="author-meta">
+                        <span class="meta-item"><i class="fas fa-chart-line"></i> 12+ guides</span>
+                        <span class="meta-item"><i class="fas fa-tag"></i> 9.2 avg</span>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">EV vs Hybrid</span>
+                        <span class="expertise-tag">Tax Credits</span>
+                        <span class="expertise-tag">Cost Analysis</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/authors/charity-ozor" class="profile-link">Full Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cynthia Ebony -->
+            <div class="author-card">
+                <div class="card-header">
+                    <div class="author-avatar">
+                        <img src="https://autotimegist.com/src/cynthia-ebony.webp" alt="Cynthia Ebony">
+                    </div>
+                    <div class="author-name">Cynthia Ebony</div>
+                    <div class="author-title">News Editor</div>
+                </div>
+                <div class="card-content">
+                    <p class="author-bio">Cynthia delivers breaking news, industry analysis, and side-by-side vehicle comparisons with sharp insights and a talent for uncovering trends.</p>
+                    <div class="author-meta">
+                        <span class="meta-item"><i class="fas fa-newspaper"></i> 1+ stories</span>
+                        <span class="meta-item"><i class="fas fa-scale-balanced"></i> 12+ comparisons</span>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">Car Comparisons</span>
+                        <span class="expertise-tag">Industry News</span>
+                        <span class="expertise-tag">Market Analysis</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/authors/cynthia-ebony" class="profile-link">Full Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Blessing Ann -->
+            <div class="author-card">
+                <div class="card-header">
+                    <div class="author-avatar">
+                        <img src="https://autotimegist.com/src/blessing-ann.webp" alt="Blessing Ann">
+                    </div>
+                    <div class="author-name">Blessing Ann</div>
+                    <div class="author-title">Maintenance Expert</div>
+                </div>
+                <div class="card-content">
+                    <p class="author-bio">ASE-certified technician with over 3 years of experience. Blessing creates practical guides for EV and hybrid maintenance, battery care, and DIY repairs.</p>
+                    <div class="author-meta">
+                        <span class="meta-item"><i class="fas fa-wrench"></i> 12 guides</span>
+                        <span class="meta-item"><i class="fas fa-certificate"></i> ASE Certified</span>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">EV Maintenance</span>
+                        <span class="expertise-tag">Battery Care</span>
+                        <span class="expertise-tag">DIY Repairs</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/authors/blessing-ann" class="profile-link">Full Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shedrack Olisa -->
+            <div class="author-card">
+                <div class="card-header">
+                    <div class="author-avatar">
+                        <img src="https://autotimegist.com/src/shedrack-olisa.webp" alt="Shedrack Olisa">
+                    </div>
+                    <div class="author-name">Shedrack Olisa</div>
+                    <div class="author-title">Investigative Reporter</div>
+                </div>
+                <div class="card-content">
+                    <p class="author-bio">Shedrack covers recalls, safety investigations, and regulatory policy. His deep-dive reporting helps readers stay informed about critical safety issues.</p>
+                    <div class="author-meta">
+                        <span class="meta-item"><i class="fas fa-search"></i> 12 investigations</span>
+                        <span class="meta-item"><i class="fas fa-newspaper"></i> 12+ stories</span>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">Recalls</span>
+                        <span class="expertise-tag">Safety</span>
+                        <span class="expertise-tag">Regulatory Policy</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/authors/shedrack-olisa" class="profile-link">Full Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Join the Team -->
+        <div class="join-team">
+            <h2>Join Our Team of Experts</h2>
+            <p>Are you passionate about cars and have expertise to share? We're always looking for talented writers, reviewers, and industry specialists to join AutoTimegist.</p>
+            <a href="https://autotimegist.com/contact" class="join-btn">Get in Touch</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

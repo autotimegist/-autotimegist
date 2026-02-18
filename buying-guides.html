@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Buying Guides - Expert Car Buying Advice & Recommendations | AutoTimegist</title>
+    <meta name="title" content="Buying Guides - Expert Car Buying Advice & Recommendations | AutoTimegist">
+    <meta name="description" content="Navigate the car buying process with confidence. Our expert guides cover everything from choosing between hybrids and EVs to finding the best family SUVs and affordable options.">
+    <meta name="keywords" content="car buying guides, vehicle recommendations, buying advice, how to choose a car, EV vs hybrid, family car guide">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/buying-guides">
+    <meta property="og:title" content="Buying Guides - Expert Car Buying Advice & Recommendations | AutoTimegist">
+    <meta property="og:description" content="Navigate the car buying process with confidence. Our expert guides cover everything from choosing between hybrids and EVs to finding the best family SUVs and affordable options.">
+    <meta property="og:image" content="https://autotimegist.com/src/buying-guides-page.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/buying-guides">
+    <meta name="twitter:title" content="Buying Guides - Expert Car Buying Advice & Recommendations">
+    <meta name="twitter:description" content="Expert guides to help you make informed car buying decisions.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/buying-guides-page.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/buying-guides">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Buying Guides",
+            "item": "https://autotimegist.com/buying-guides"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal guides-page-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Buying Guides Content */
+        .guides-container {
+            max-width: 1400px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .guides-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guides-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .guides-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .category-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .category-btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            background: var(--white);
+            color: var(--text-dark);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .category-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .featured-guide {
+            background: linear-gradient(135deg, #f5f0e7, #e8e0d5);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .featured-image {
+            flex: 1 1 300px;
+            height: 200px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .featured-content {
+            flex: 2 1 300px;
+        }
+
+        .featured-content h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .guide-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .card-meta i {
+            margin-right: 0.3rem;
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .card-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .card-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+
+        .card-author {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .card-author a {
+            color: var(--text-light);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-color);
+        }
+
+        .card-author a:hover {
+            color: var(--primary-color);
+        }
+
+        .quick-tips {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .tips-content {
+            flex: 2 1 300px;
+        }
+
+        .tips-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .tips-list {
+            list-style: none;
+        }
+
+        .tips-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tips-list i {
+            color: var(--accent-color);
+        }
+
+        .tips-image {
+            flex: 1 1 200px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 3rem;
+        }
+
+        .pagination {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .page-btn.next {
+            width: auto;
+            padding: 0 1.2rem;
+            border-radius: 30px;
+        }
+
+        .newsletter-signup {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-signup h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-signup p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1 1 250px;
+            padding: 1rem;
+            border: none;
+            border-radius: 40px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #c72e3a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .guides-hero h1 {
+                font-size: 2rem;
+            }
+
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .guides-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="guides-container">
+        <div class="guides-hero">
+            <h1>Car Buying Guides</h1>
+            <p>Navigate the complex world of car buying with confidence. Our expert guides help you compare options, understand technologies, and find the perfect vehicle for your needs.</p>
+        </div>
+
+        <!-- Category Navigation -->
+        <!-- <div class="category-nav">
+            <a href="#" class="category-btn">All Guides</a>
+            <a href="#" class="category-btn">EV & Hybrid</a>
+            <a href="#" class="category-btn">Family Cars</a>
+            <a href="#" class="category-btn">SUVs</a>
+            <a href="#" class="category-btn">Budget</a>
+            <a href="#" class="category-btn">Luxury</a>
+            <a href="#" class="category-btn">Maintenance</a>
+        </div> -->
+
+        <!-- Featured Guide -->
+        <div class="featured-guide">
+            <div class="featured-image" style="background-image: url('https://autotimegist.com/src/phev-vs-hybrid-vs-ev-2026-guide.webp');"></div>
+            <div class="featured-content">
+                <span class="featured-badge">ESSENTIAL READING</span>
+                <h2>2026 PHEV vs Hybrid vs EV: Complete Buyer's Guide</h2>
+                <p>Confused by electrified powertrains? We break down costs, charging needs, range, and tax credits to help you find your perfect match.</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://autotimegist.com/" class="read-more">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guides Grid -->
+        <div class="guides-grid">
+            <!-- 1. Best Electric Cars 2026: Complete EV Buying Guide -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-electric-cars-2026-guide.webp');">
+                    <span class="card-category">Electric Vehicles</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-electric-cars-2026-guide">Best Electric Cars 2026: Complete EV Buying Guide</a></h3>
+                    <p class="card-excerpt">Your ultimate 2026 EV buying guide. Top picks by category, expert reviews, pricing, range, and new 2026 EV tax credit rules.</p>
+                    <div class="card-tags">
+                        <span class="tag">#EVGuide</span>
+                        <span class="tag">#BestEVs</span>
+                        <span class="tag">#NACS</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-electric-cars-2026-guide" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="#">Emmanuel IK</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Best Hybrid SUVs 2026: Top Picks Under $50K -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-hybrid-suvs-2026-under-50k.webp');">
+                    <span class="card-category">Hybrid SUVs</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-hybrid-suvs-2026-under-50k">Best Hybrid SUVs 2026: Top Picks Under $50K</a></h3>
+                    <p class="card-excerpt">Your complete guide to the best hybrid SUVs under $50,000 in 2026. Top picks from Honda, Toyota, Kia, Hyundai, and more.</p>
+                    <div class="card-tags">
+                        <span class="tag">#HybridSUV</span>
+                        <span class="tag">#Under50K</span>
+                        <span class="tag">#CRVHybrid</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-hybrid-suvs-2026-under-50k" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="#">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. First Time EV Buyer Guide 2026: Everything You Need -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/first-time-ev-buyer-guide-2026.webp');">
+                    <span class="card-category">Beginner's Guide</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/first-time-ev-buyer-guide-2026">First Time EV Buyer Guide 2026: Everything You Need</a></h3>
+                    <p class="card-excerpt">Complete first-time EV buyer guide for 2026. Learn about range, charging, NACS vs CCS, tax credits, and top beginner-friendly electric cars.</p>
+                    <div class="card-tags">
+                        <span class="tag">#FirstTimeEV</span>
+                        <span class="tag">#EVGuide</span>
+                        <span class="tag">#NACS</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/first-time-ev-buyer-guide-2026" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="#">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Best Family Cars 2026: Hybrid and Electric Options -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-family-cars-2026-hybrid-electric.webp');">
+                    <span class="card-category">Family Cars</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-family-cars-2026-hybrid-electric">Best Family Cars 2026: Hybrid and Electric Options</a></h3>
+                    <p class="card-excerpt">Complete guide to the best hybrid and electric family cars for 2026. Top picks for SUVs, minivans, sedans, and 3-row models.</p>
+                    <div class="card-tags">
+                        <span class="tag">#FamilyCars</span>
+                        <span class="tag">#3RowSUV</span>
+                        <span class="tag">#Minivan</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-family-cars-2026-hybrid-electric" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. How to Choose Between Hybrid and EV in 2026 -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/choose-between-hybrid-ev-2026.webp');">
+                    <span class="card-category">Decision Guide</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/how-to-choose-between-hybrid-and-ev-2026">How to Choose Between Hybrid and EV in 2026</a></h3>
+                    <p class="card-excerpt">Complete guide to choosing between a hybrid and electric vehicle in 2026. Compare costs, charging needs, range, and tax credits.</p>
+                    <div class="card-tags">
+                        <span class="tag">#HybridVsEV</span>
+                        <span class="tag">#PHEV</span>
+                        <span class="tag">#TaxCredit</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/how-to-choose-between-hybrid-and-ev-2026" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Best Used Electric Cars 2026: Certified Pre-Owned EVs -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-used-electric-cars-2026-cpo.webp');">
+                    <span class="card-category">Used EVs</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-used-electric-cars-2026-cpo">Best Used Electric Cars 2026: Certified Pre-Owned EVs</a></h3>
+                    <p class="card-excerpt">Complete guide to the best used electric cars and certified pre-owned EVs in 2026. Top picks under $30k, battery health checks, and used EV tax credit details.</p>
+                    <div class="card-tags">
+                        <span class="tag">#UsedEV</span>
+                        <span class="tag">#CPO</span>
+                        <span class="tag">#TaxCredit</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-used-electric-cars-2026-cpo" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. 2026 EV Charging Guide: Home vs Public Charging -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/ev-charging-guide-2026-home-vs-public.webp');">
+                    <span class="card-category">Charging</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/ev-charging-guide-2026-home-vs-public">2026 EV Charging Guide: Home vs Public Charging</a></h3>
+                    <p class="card-excerpt">Complete 2026 guide to EV charging. Compare home vs public charging costs, speed, and convenience. Learn about Level 1, Level 2, DC fast charging, and NACS.</p>
+                    <div class="card-tags">
+                        <span class="tag">#EVCharging</span>
+                        <span class="tag">#NACS</span>
+                        <span class="tag">#HomeCharging</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/ev-charging-guide-2026-home-vs-public" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Best Electric Trucks 2026: Buyer's Complete Guide -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-electric-trucks-2026-guide.webp');">
+                    <span class="card-category">Electric Trucks</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-electric-trucks-2026-buyers-guide">Best Electric Trucks 2026: Buyer's Complete Guide</a></h3>
+                    <p class="card-excerpt">Complete guide to the best electric trucks in 2026. Compare Ford F-150 Lightning, Rivian R1T, Chevrolet Silverado EV, Tesla Cybertruck, and more.</p>
+                    <div class="card-tags">
+                        <span class="tag">#ElectricTrucks</span>
+                        <span class="tag">#F150Lightning</span>
+                        <span class="tag">#Cybertruck</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-electric-trucks-2026-buyers-guide" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Luxury EV Buying Guide 2026: Top Premium Models -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/luxury-ev-buying-guide-2026.webp');">
+                    <span class="card-category">Luxury EVs</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/luxury-ev-buying-guide-2026">Luxury EV Buying Guide 2026: Top Premium Models</a></h3>
+                    <p class="card-excerpt">Complete 2026 luxury EV buying guide. Compare top premium electric SUVs and sedans from BMW, Mercedes, Audi, Rivian, Lucid, Cadillac, and Tesla.</p>
+                    <div class="card-tags">
+                        <span class="tag">#LuxuryEV</span>
+                        <span class="tag">#BMWiX</span>
+                        <span class="tag">#LucidAir</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/luxury-ev-buying-guide-2026" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Best Affordable Hybrids Under $30K in 2026 -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-affordable-hybrids-2026-under-30k.webp');">
+                    <span class="card-category">Budget Hybrids</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-affordable-hybrids-2026-under-30k">Best Affordable Hybrids Under $30K in 2026</a></h3>
+                    <p class="card-excerpt">Complete guide to the best hybrid cars and SUVs under $30,000 in 2026. Compare Toyota Corolla Hybrid, Hyundai Elantra Hybrid, Kia Niro, Ford Maverick, and more.</p>
+                    <div class="card-tags">
+                        <span class="tag">#AffordableHybrid</span>
+                        <span class="tag">#Under30K</span>
+                        <span class="tag">#MPG</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-affordable-hybrids-2026-under-30k" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Best Plug-in Hybrids 2026: PHEV Complete Guide -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-plug-in-hybrids-2026-phev-guide.webp');">
+                    <span class="card-category">Plug-in Hybrids</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/best-plug-in-hybrids-2026-phev-guide">Best Plug-in Hybrids 2026: PHEV Complete Guide</a></h3>
+                    <p class="card-excerpt">Complete guide to the best plug-in hybrids (PHEVs) in 2026. Compare electric range, MPG, pricing, and tax credits. Top picks from Toyota, Mitsubishi, Hyundai, Kia, BMW, and more.</p>
+                    <div class="card-tags">
+                        <span class="tag">#PHEV</span>
+                        <span class="tag">#PriusPrime</span>
+                        <span class="tag">#TaxCredit</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/best-plug-in-hybrids-2026-phev-guide" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. 2026 PHEV vs Hybrid vs EV: Complete Buyer's Guide -->
+            <div class="guide-card">
+                <div class="card-image" style="background-image: url('https://autotimegist.com/src/phev-vs-hybrid-vs-ev-2026-guide.webp');">
+                    <span class="card-category">Ultimate Guide</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span><i class="far fa-calendar"></i> Feb 17, 2026</span>
+                        <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                    <h3 class="card-title"><a href="https://autotimegist.com/phev-vs-hybrid-vs-ev-2026-buyers-guide">2026 PHEV vs Hybrid vs EV: Complete Buyer's Guide</a></h3>
+                    <p class="card-excerpt">Confused by electrified powertrains? We break down 2026 PHEVs, standard hybrids, and EVs. Compare costs, charging needs, range, and real-world data to find your perfect match.</p>
+                    <div class="card-tags">
+                        <span class="tag">#PHEV</span>
+                        <span class="tag">#Hybrid</span>
+                        <span class="tag">#EV</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://autotimegist.com/phev-vs-hybrid-vs-ev-2026-buyers-guide" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-author">by <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <!-- <div class="pagination">
+            <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn"><i class="fas fa-ellipsis-h"></i></a>
+            <a href="#" class="page-btn next">Next <i class="fas fa-chevron-right"></i></a>
+        </div> -->
+
+        <!-- Quick Tips Section -->
+        <div class="quick-tips">
+            <div class="tips-content">
+                <h2>Quick Car Buying Tips for 2026</h2>
+                <ul class="tips-list">
+                    <li><i class="fas fa-check-circle"></i> Compare total cost of ownership, not just purchase price</li>
+                    <li><i class="fas fa-check-circle"></i> Check for available federal and state incentives</li>
+                    <li><i class="fas fa-check-circle"></i> Consider charging access before buying an EV or PHEV</li>
+                    <li><i class="fas fa-check-circle"></i> Research insurance costs—they vary significantly by model</li>
+                    <li><i class="fas fa-check-circle"></i> Look for NACS ports for Tesla Supercharger access</li>
+                </ul>
+            </div>
+            <div class="tips-image">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup">
+            <h2>Stay Informed</h2>
+            <p>Get the latest buying guides, reviews, and automotive news delivered to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                newsletterForm.reset();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Terms of Use - AutoTimegist | Website Terms and Conditions</title>
+    <meta name="title" content="Terms of Use - AutoTimegist">
+    <meta name="description" content="Read AutoTimegist's Terms of Use governing your use of our website, content, and services. By accessing our site, you agree to these terms and conditions.">
+    <meta name="keywords" content="terms of use, terms and conditions, website terms, AutoTimegist legal">
+    <meta name="author" content="AutoTimegist Team">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autotimegist.com/terms-of-use">
+    <meta property="og:title" content="Terms of Use - AutoTimegist">
+    <meta property="og:description" content="Read AutoTimegist's Terms of Use governing your use of our website, content, and services.">
+    <meta property="og:image" content="https://autotimegist.com/src/terms-of-use.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://autotimegist.com/terms-of-use">
+    <meta name="twitter:title" content="Terms of Use - AutoTimegist">
+    <meta name="twitter:description" content="Website terms and conditions for AutoTimegist.">
+    <meta name="twitter:image" content="https://autotimegist.com/src/terms-of-use.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://autotimegist.com/terms-of-use">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://autotimegist.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms of Use",
+            "item": "https://autotimegist.com/terms-of-use"
+        }]
+    }
+    </script>
+    
+    <style>
+        /* Only minimal terms-specific styling - all mobile safe */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1e1e2f;
+            --accent-color: #ffb347;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        /* Header Styles (same as homepage) */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.3rem;
+            outline: none;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Terms of Use Content */
+        .terms-container {
+            max-width: 1000px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .terms-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terms-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .terms-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        .last-updated {
+            text-align: right;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .terms-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .terms-section h2 {
+            font-size: 1.6rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .terms-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .terms-section h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .terms-section p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 0.5rem 0 1.2rem 1.5rem;
+            color: var(--text-light);
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-section strong {
+            color: var(--secondary-color);
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0284c7;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box i {
+            color: #0284c7;
+            margin-right: 0.5rem;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box i {
+            color: #ff9800;
+            margin-right: 0.5rem;
+        }
+
+        .terms-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .terms-card {
+            flex: 1 1 200px;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .terms-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .terms-card h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
+
+        .prohibited-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .prohibited-item {
+            flex: 1 1 200px;
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .prohibited-item i {
+            color: #e63946;
+            font-size: 1.1rem;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-option {
+            flex: 1 1 200px;
+            background: var(--bg-light);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-option i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-option h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-option p a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-option p a:hover {
+            color: var(--primary-color);
+        }
+
+        .print-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-light);
+            color: var(--secondary-color);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+            border: none;
+            font-family: inherit;
+        }
+
+        .print-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .jurisdiction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .jurisdiction-table th {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .jurisdiction-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            color: var(--text-light);
+        }
+
+        .jurisdiction-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .terms-hero h1 {
+                font-size: 2rem;
+            }
+
+            .terms-section {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terms-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="terms-container">
+        <div class="terms-hero">
+            <h1>Terms of Use</h1>
+            <p>Please read these Terms of Use carefully before using the AutoTimegist website. By accessing or using our site, you agree to be bound by these terms.</p>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+            <i class="fas fa-print"></i> Print These Terms
+        </button>
+
+        <div class="last-updated">
+            Last Updated: February 18, 2026 | Effective Date: January 1, 2026
+        </div>
+
+        <div class="terms-section">
+            <h2>1. Acceptance of Terms</h2>
+            <p>Welcome to AutoTimegist. These Terms of Use ("Terms") govern your use of our website located at <a href="https://autotimegist.com/">https://autotimegist.com/</a> (the "Site") and any related services provided by AutoTimegist.</p>
+            <p>By accessing or using the Site, you confirm that you accept these Terms and that you agree to comply with them. If you do not agree to these Terms, you must not use our Site.</p>
+            <p>We may revise these Terms at any time by amending this page. We will notify you of any changes by updating the "Last Updated" date at the top of this page. Your continued use of the Site after such changes constitutes your acceptance of the new Terms.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>2. Intellectual Property Rights</h2>
+            <p>Unless otherwise stated, AutoTimegist and/or its licensors own the intellectual property rights for all material on this Site, including but not limited to text, graphics, logos, images, audio clips, digital downloads, data compilations, and software. All content is protected by United States and international copyright, trademark, and other intellectual property laws.</p>
+            
+            <div class="terms-grid">
+                <div class="terms-card">
+                    <i class="fas fa-copyright"></i>
+                    <h4>Copyright</h4>
+                    <p>All original content is copyrighted by AutoTimegist. Unauthorized use is prohibited.</p>
+                </div>
+                <div class="terms-card">
+                    <i class="fas fa-trademark"></i>
+                    <h4>Trademarks</h4>
+                    <p>"AutoTimegist" and our logo are registered trademarks.</p>
+                </div>
+                <div class="terms-card">
+                    <i class="fas fa-database"></i>
+                    <h4>Database Rights</h4>
+                    <p>Our compilations of data are protected by database rights.</p>
+                </div>
+                <div class="terms-card">
+                    <i class="fas fa-code"></i>
+                    <h4>Software</h4>
+                    <p>Site software is owned by AutoTimegist and may not be copied.</p>
+                </div>
+            </div>
+
+            <p>You may view, download, and print pages from the Site for your personal use, subject to the restrictions set out below and elsewhere in these Terms.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>3. Permitted Use and License</h2>
+            <p>Subject to your compliance with these Terms, AutoTimegist grants you a limited, non-exclusive, non-transferable, revocable license to:</p>
+            <ul>
+                <li>Access and view the Site for your personal, non-commercial use.</li>
+                <li>Share links to our content through social media or other platforms.</li>
+                <li>Quote brief excerpts of our content for non-commercial purposes with proper attribution (including a link back to the original article on our Site).</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <i class="fas fa-check-circle"></i> <strong>Attribution Requirement:</strong> When quoting our content, you must clearly credit AutoTimegist and include a link to the original article. For example: "Source: AutoTimegist - [Article Title] (autotimegist.com/article-title)".
+            </div>
+        </div>
+
+        <div class="terms-section">
+            <h2>4. Prohibited Use</h2>
+            <p>You may use our Site only for lawful purposes. You may not use our Site:</p>
+            
+            <div class="prohibited-list">
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Copy, reproduce, or republish content without permission
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Sell, rent, or sub-license material from the Site
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Use automated means to access or scrape the Site
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Reproduce, duplicate, or copy material for commercial purposes
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Redistribute content (including framing) without written permission
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Post false, misleading, or defamatory content
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Upload viruses or malicious code
+                </div>
+                <div class="prohibited-item">
+                    <i class="fas fa-times-circle"></i> Interfere with the proper working of the Site
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <i class="fas fa-gavel"></i> <strong>Violation of Terms:</strong> We reserve the right to terminate your access to the Site for any unauthorized use, without notice, and to take appropriate legal action.
+            </div>
+        </div>
+
+        <div class="terms-section">
+            <h2>5. User Contributions and Comments</h2>
+            <p>Certain parts of our Site may allow users to post comments, reviews, or other content ("User Contributions"). By posting content, you grant AutoTimegist a non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media.</p>
+            
+            <h3>User Representations and Warranties</h3>
+            <p>You represent and warrant that:</p>
+            <ul>
+                <li>You own or control all rights to the content you post.</li>
+                <li>The content is accurate and not misleading.</li>
+                <li>The content does not violate any third-party rights or applicable laws.</li>
+                <li>The content is not defamatory, obscene, abusive, or otherwise objectionable.</li>
+            </ul>
+
+            <h3>Monitoring and Removal</h3>
+            <p>We have the right, but not the obligation, to monitor and edit or remove any User Contributions. We take no responsibility and assume no liability for any content posted by you or any third party.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>6. Accuracy of Information and Disclaimer</h2>
+            <p>We strive to provide accurate and up-to-date information, but we make no warranties or representations about the accuracy, completeness, or reliability of any content on the Site. The information is provided "as is" without warranty of any kind.</p>
+            
+            <div class="highlight-box">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> Automotive information, specifications, and pricing are subject to change without notice. You should independently verify any information before making purchasing decisions.
+            </div>
+
+            <p>AutoTimegist does not endorse any specific vehicles, manufacturers, or products mentioned on the Site. Reviews and opinions are those of the individual authors and do not necessarily reflect the views of AutoTimegist.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>7. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by applicable law, AutoTimegist shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
+            <ul>
+                <li>Your use or inability to use the Site.</li>
+                <li>Any conduct or content of any third party on the Site.</li>
+                <li>Any content obtained from the Site.</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content.</li>
+            </ul>
+            <p>Our total liability to you for all claims arising from or relating to these Terms or your use of the Site shall not exceed the amount you paid us, if any, during the twelve months preceding the claim.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>8. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless AutoTimegist, its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) that arise from or relate to:</p>
+            <ul>
+                <li>Your use of the Site.</li>
+                <li>Your violation of these Terms.</li>
+                <li>Your violation of any third-party right, including without limitation any copyright, property, or privacy right.</li>
+                <li>Any claim that your User Contributions caused damage to a third party.</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>9. Third-Party Links</h2>
+            <p>Our Site may contain links to third-party websites or services that are not owned or controlled by AutoTimegist. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. You acknowledge and agree that AutoTimegist shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>10. Governing Law and Jurisdiction</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of the State of Michigan, United States, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+
+            <div class="table-responsive">
+                <table class="jurisdiction-table">
+                    <thead>
+                        <tr>
+                            <th>Jurisdiction</th>
+                            <th>Governing Law</th>
+                            <th>Dispute Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>United States</strong></td>
+                            <td>Michigan</td>
+                            <td>State and federal courts in Michigan</td>
+                        </tr>
+                        <tr>
+                            <td><strong>International Users</strong></td>
+                            <td>Michigan, USA</td>
+                            <td>State and federal courts in Michigan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="terms-section">
+            <h2>11. Dispute Resolution</h2>
+            <p>Any dispute arising out of or relating to these Terms or your use of the Site shall first be resolved through good-faith negotiations. If the dispute cannot be resolved through negotiation, it shall be submitted to binding arbitration in accordance with the rules of the American Arbitration Association, and judgment on the arbitration award may be entered in any court having jurisdiction thereof.</p>
+            <p>YOU AND AutoTimegist AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>12. Termination</h2>
+            <p>We may terminate or suspend your access to the Site immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>13. Severability</h2>
+            <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>14. Entire Agreement</h2>
+            <p>These Terms, together with our <a href="https://autotimegist.com/privacy-policy">Privacy Policy</a> and any other legal notices published by AutoTimegist on the Site, shall constitute the entire agreement between you and AutoTimegist concerning your use of the Site.</p>
+        </div>
+
+        
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AutoTimegist</h3>
+                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://autotimegist.com/">Home</a></li>
+                    <li><a href="https://autotimegist.com/about">About Us</a></li>
+                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Optional: Add smooth scroll to anchor links within the page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
