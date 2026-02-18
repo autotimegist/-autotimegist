@@ -91,7 +91,8 @@
             --text-dark: #2d3436;
             /* --text-light: #636e72; */
             /* --text-light: #2a4f5d; */
-            --text-light: #03035c;
+            /* --text-light: #03035c; */
+            --text-light: #1e1e2f;
             --bg-light: #f8f9fa;
             --white: #ffffff;
             --shadow: 0 5px 15px rgba(0,0,0,0.1);
