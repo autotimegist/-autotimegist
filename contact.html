@@ -737,58 +737,185 @@
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form-container">
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" placeholder="John" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" placeholder="Doe" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" placeholder="john.doe@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="subject">Subject *</label>
-                            <select id="subject" required>
-                                <option value="" disabled selected>Select a subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="review">Car Review Request</option>
-                                <option value="press">Press Inquiry</option>
-                                <option value="advertising">Advertising</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="message">Message *</label>
-                            <textarea id="message" placeholder="How can we help you?" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                        <p class="form-note">By submitting this form, you agree to our <a href="https://autotimegist.com/privacy-policy">Privacy Policy</a>.</p>
-                    </form>
-                </div>
-            </div>
-        </div>
+            <!-- Styled Contact Form for FitLife Pro -->
+<form
+  action="https://formspree.io/f/xeelvqwe"
+  method="POST"
+  class="contact-form"
+>
+  <div class="form-group">
+    <label for="email">Your Email *</label>
+    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Your Message *</label>
+    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
+<style>
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: #fafafa;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #2a5298;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  /* Success message styling (you can add this dynamically) */
+  .form-success {
+    background: #e3f5e9;
+    color: #28a745;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #28a745;
+  }
+
+  .form-error {
+    background: #fff3f3;
+    color: #dc3545;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #dc3545;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<!-- Optional JavaScript for enhanced UX -->
+<script>
+  const contactForm = document.querySelector('.contact-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      const email = formData.get('email');
+      const message = formData.get('message');
+      
+      // Basic validation
+      if (!email || !message) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      if (!email.includes('@') || !email.includes('.')) {
+        alert('Please enter a valid email address');
+        return;
+      }
+      
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Show success message
+          const successDiv = document.createElement('div');
+          successDiv.className = 'form-success';
+          successDiv.textContent = 'Thank you for your message! We\'ll get back to you within 24-48 hours.';
+          contactForm.prepend(successDiv);
+          contactForm.reset();
+          
+          // Remove success message after 5 seconds
+          setTimeout(() => {
+            successDiv.remove();
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        // Show error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'form-error';
+        errorDiv.textContent = 'Something went wrong. Please try again or email us directly at info@fitlifepro.com';
+        contactForm.prepend(errorDiv);
+        
+        setTimeout(() => {
+          errorDiv.remove();
+        }, 5000);
+      }
+    });
+  }
+</script>
 
         
     </main>
