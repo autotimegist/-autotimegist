@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlitechGames - Professional Gaming Blog</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6C5CE7;
+            --secondary-color: #00D2DF;
+            --accent-color: #FD377E;
+            --dark-bg: #0F0F1A;
+            --darker-bg: #07070F;
+            --card-bg: #1A1A2E;
+            --text-light: #FFFFFF;
+            --text-gray: #B8B8C7;
+            --gradient-1: linear-gradient(135deg, #6C5CE7 0%, #00D2DF 100%);
+            --gradient-2: linear-gradient(135deg, #FD377E 0%, #6C5CE7 100%);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-1);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gradient-2);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(7, 7, 15, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(108, 92, 231, 0.2);
+        }
+
+        .logo a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        /* Desktop Navigation */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-1);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--darker-bg);
+            padding: 100px 2rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            border-left: 1px solid rgba(108, 92, 231, 0.2);
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        /* Close Button inside Mobile Menu */
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            z-index: 1002;
+        }
+
+        .mobile-menu-close:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(108, 92, 231, 0.5);
+        }
+
+        .mobile-menu-close i {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-nav-links a i {
+            color: var(--primary-color);
+            width: 25px;
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary-color);
+            padding-left: 10px;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            height: 80vh;
+            background: linear-gradient(rgba(7, 7, 15, 0.8), rgba(7, 7, 15, 0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(108, 92, 231, 0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            100% {
+                left: 100%;
+            }
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-1);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
+        }
+
+        /* Featured Posts Section */
+        .featured-posts {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gradient-1);
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .post-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(108, 92, 231, 0.1);
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .post-card:hover .post-image img {
+            transform: scale(1.1);
+        }
+
+        .post-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gradient-1);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .post-meta i {
+            color: var(--primary-color);
+            margin-right: 0.3rem;
+        }
+
+        .post-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .post-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+        }
+
+        /* Trending Section */
+        .trending {
+            padding: 5rem 5%;
+            background: var(--darker-bg);
+        }
+
+        .trending-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .trending-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(108, 92, 231, 0.1);
+        }
+
+        .trending-item:hover {
+            transform: scale(1.05);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+        }
+
+        .trending-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .trending-item h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .trending-stats {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* Latest Reviews Section */
+        .latest-reviews {
+            padding: 5rem 5%;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review-header {
+            height: 150px;
+            background: var(--gradient-2);
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .review-score {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 50px;
+            height: 50px;
+            background: var(--darker-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .review-content {
+            padding: 1.5rem;
+        }
+
+        .review-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-meta {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.1) 0%, rgba(0, 210, 223, 0.1) 100%);
+            text-align: center;
+        }
+
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            background: var(--card-bg);
+            color: var(--text-light);
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--gradient-1);
+            border: none;
+            color: var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            padding: 3rem 5% 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-section p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-1);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(108, 92, 231, 0.2);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 5%;
+            }
+
+            .logo a {
+                font-size: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .post-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(108, 92, 231, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="https://olitechgames.com/">OlitechGames</a></div>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+            <a href="https://olitechgames.com/">HOME</a>
+            <a href="https://olitechgames.com/android-games.html">APK GAMES</a>
+            <a href="https://olitechgames.com/psp-games.html">PPSSPP GAMES</a>
+            <a href="https://olitechgames.com/android-apps.html">ANDROID APPS</a>
+            <a href="https://olitechgames.com/reviews">REVIEWS</a>
+            <a href="https://olitechgames.com/news">NEWS</a>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <!-- Close Button inside Mobile Menu -->
+        <div class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </div>
+        
+        <div class="mobile-nav-links">
+            <a href="https://olitechgames.com/"><i class="fas fa-home"></i> HOME</a>
+            <a href="https://olitechgames.com/android-games.html"><i class="fas fa-gamepad"></i> APK GAMES</a>
+            <a href="https://olitechgames.com/psp-games.html"><i class="fas fa-compact-disc"></i> PPSSPP GAMES</a>
+            <a href="https://olitechgames.com/android-apps.html"><i class="fas fa-mobile-alt"></i> ANDROID APPS</a>
+            <a href="https://olitechgames.com/reviews"><i class="fas fa-star"></i> REVIEWS</a>
+            <a href="https://olitechgames.com/news"><i class="fas fa-newspaper"></i> NEWS</a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Level Up Your Gaming Experience</h1>
+            <p>Latest news, in-depth reviews, and exclusive features from the world of gaming</p>
+            <a href="#" class="cta-button">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+        <h2 class="section-title">Featured Posts</h2>
+        <div class="post-grid">
+            <!-- Post 1 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Game Review">
+                    <span class="post-category">APK Games</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Feb 28, 2024</span>
+                        <span><i class="far fa-comment"></i> 24 Comments</span>
+                    </div>
+                    <h3 class="post-title">Top Android Games of 2024</h3>
+                    <p class="post-excerpt">Discover the best APK games that are taking the mobile gaming world by storm...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PPSSPP Games">
+                    <span class="post-category">PPSSPP Games</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Feb 27, 2024</span>
+                        <span><i class="far fa-comment"></i> 18 Comments</span>
+                    </div>
+                    <h3 class="post-title">Best PPSSPP Games for Android</h3>
+                    <p class="post-excerpt">Experience classic PSP titles on your mobile device with these top PPSSPP games...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Android Apps">
+                    <span class="post-category">Android Apps</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Feb 26, 2024</span>
+                        <span><i class="far fa-comment"></i> 32 Comments</span>
+                    </div>
+                    <h3 class="post-title">Essential Android Apps for Gamers</h3>
+                    <p class="post-excerpt">Enhance your gaming experience with these must-have Android applications...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="trending-grid">
+            <div class="trending-item">
+                <div class="trending-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3>GTA San Andreas</h3>
+                <p>PPSSPP version tops downloads</p>
+                <div class="trending-stats">+245% this week</div>
+            </div>
+            <div class="trending-item">
+                <div class="trending-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>PUBG Mobile</h3>
+                <p>New update released</p>
+                <div class="trending-stats">#1 Trending</div>
+            </div>
+            <div class="trending-item">
+                <div class="trending-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>God of War</h3>
+                <p>PPSSPP emulation guide</p>
+                <div class="trending-stats">Hot Topic</div>
+            </div>
+            <div class="trending-item">
+                <div class="trending-icon">
+                    <i class="fas fa-meteor"></i>
+                </div>
+                <h3>Call of Duty Mobile</h3>
+                <p>Season 3 details</p>
+                <div class="trending-stats">+189% this week</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Reviews -->
+    <section class="latest-reviews" id="reviews">
+        <h2 class="section-title">Latest Reviews</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <h3>GTA V</h3>
+                    <div class="review-score">9.5</div>
+                </div>
+                <div class="review-content">
+                    <div class="review-meta">
+                        <span><i class="fas fa-star"></i> APK Games</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                    <p>The ultimate mobile port of the classic open-world game...</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <h3>God of War</h3>
+                    <div class="review-score">9.2</div>
+                </div>
+                <div class="review-content">
+                    <div class="review-meta">
+                        <span><i class="fas fa-star"></i> PPSSPP Games</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                    <p>Experience Kratos' vengeance on your Android device...</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <h3>Game Booster</h3>
+                    <div class="review-score">8.8</div>
+                </div>
+                <div class="review-content">
+                    <div class="review-meta">
+                        <span><i class="fas fa-star"></i> Android Apps</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                    <p>Boost your gaming performance with this essential app...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Join the OlitechGames Community</h2>
+            <p>Subscribe to get the latest APK games, PPSSPP games, and Android apps delivered directly to your inbox.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); showSubscribeMessage()">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About OlitechGames</h3>
+                <p>Your ultimate source for APK games, PPSSPP games, and Android apps. We're passionate about mobile gaming and dedicated to bringing you the best content.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="https://olitechgames.com/android-games.html">APK GAMES</a></li>
+                    <li><a href="https://olitechgames.com/psp-games.html">PPSSPP GAMES</a></li>
+                    <li><a href="https://olitechgames.com/android-apps.html">ANDROID APPS</a></li>
+                    <li><a href="https://olitechgames.com/reviews">REVIEWS</a></li>
+                    <li><a href="https://olitechgames.com/news">NEWS</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://olitechgames.com/">Home</a></li>
+                    <li><a href="https://olitechgames.com/contact.html">Contact</a></li>
+                    <li><a href="https://olitechgames.com/privacy-and-policy.html">Privacy Policy</a></li>
+                    <li><a href="https://olitechgames.com/about">About Us</a></li>
+                    <li><a href="https://olitechgames.com/terms-of-service">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 OlitechGames. All rights reserved. | Your trusted source for mobile gaming.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for interactions -->
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function openMenu() {
+            hamburger.classList.add('active');
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleMenu() {
+            if (mobileMenu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter subscription message
+        function showSubscribeMessage() {
+            const email = document.querySelector('.newsletter-form input').value;
+            if (email) {
+                alert('Thanks for subscribing! Check your email for confirmation.');
+                document.querySelector('.newsletter-form input').value = '';
+            }
+        }
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(7, 7, 15, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.5)';
+            } else {
+                navbar.style.background = 'rgba(7, 7, 15, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Add loading animation to read more links
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const originalText = link.innerHTML;
+                link.innerHTML = '<span class="loading"></span> Loading...';
+                
+                setTimeout(() => {
+                    link.innerHTML = originalText;
+                    // In a real implementation, you'd navigate to the article here
+                }, 1500);
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to cards
+        document.querySelectorAll('.post-card, .trending-item, .review-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

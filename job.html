@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexForum | Legal insights & professional counsel</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fafbfc;
+            color: #1e2b3c;
+            line-height: 1.5;
+        }
+
+        /* fallback Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+
+        /* professional container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* header / nav — like a premium legal brand */
+        .site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeef2;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0,20,30,0.02);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            background: #13294b;
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 8px rgba(0,40,80,0.1);
+        }
+
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #13294b;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #4b5f73;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2b3f57;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            letter-spacing: 0.2px;
+        }
+
+        .nav-links a:hover {
+            color: #0a2942;
+        }
+
+        .nav-links a.active {
+            color: #13294b;
+            font-weight: 600;
+            border-bottom: 2px solid #ae8f6b;
+            padding-bottom: 4px;
+        }
+
+        .btn-consult {
+            background-color: #13294b;
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: none;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(19,41,75,0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn-consult i {
+            font-size: 0.85rem;
+        }
+
+        .btn-consult:hover {
+            background-color: #1e3a5f;
+            box-shadow: 0 8px 16px rgba(19,41,75,0.2);
+            color: white;
+        }
+
+        /* hero – brief, authority */
+        .hero-section {
+            padding: 3.5rem 0 2.5rem;
+        }
+
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1 1 400px;
+        }
+
+        .badge {
+            background: #e9edf3;
+            color: #1e3b5c;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+            border: 1px solid #d0dbe8;
+        }
+
+        .hero-content h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #0b1f33;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content h2 i {
+            color: #a37c4b;
+            font-style: normal;
+            border-bottom: 3px solid #e1cfb5;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #365072;
+            max-width: 520px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #13294b;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4e6b8a;
+        }
+
+        .hero-image {
+            flex: 1 1 300px;
+            background: #dae1ec;
+            border-radius: 28px;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(145deg, #cbd7e6, #eef3f9);
+            box-shadow: 0 20px 35px -10px rgba(0,32,64,0.15);
+            border: 1px solid rgba(255,255,255,0.5);
+            color: #2d4b71;
+            font-size: 1.4rem;
+            font-weight: 300;
+            gap: 8px;
+        }
+
+        .hero-image i {
+            font-size: 3rem;
+            opacity: 0.5;
+            color: #1a304b;
+        }
+
+        /* featured posts grid – professional cards */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #13294b;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-sub {
+            color: #4c6c89;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid #ae8f6b;
+            padding-left: 1.2rem;
+            font-weight: 400;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0 3rem;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 10px 25px -8px rgba(0,20,40,0.08);
+            border: 1px solid #edf2f7;
+            transition: all 0.25s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 36px -12px rgba(19,41,75,0.18);
+            border-color: #cddae9;
+        }
+
+        .card-category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            background: #edf3fa;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            color: #1b3b5c;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid #bacee4;
+        }
+
+        .post-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0.5rem 0 1rem;
+            color: #0c223a;
+            line-height: 1.3;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 0.8rem;
+            color: #62748c;
+            margin: 1rem 0 1.2rem;
+            align-items: center;
+        }
+
+        .post-meta i {
+            margin-right: 4px;
+            color: #8f7a62;
+            width: 16px;
+        }
+
+        .excerpt {
+            color: #3a4d66;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .read-link {
+            font-weight: 600;
+            color: #13294b;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 1px solid transparent;
+            transition: border 0.2s;
+        }
+
+        .read-link:hover {
+            border-bottom-color: #13294b;
+        }
+
+        /* expert bar / callout */
+        .expertise-bar {
+            background: #13294b;
+            margin: 3rem 0 2rem;
+            border-radius: 44px;
+            padding: 2.8rem 3rem;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-image: radial-gradient(circle at 100% 0%, #264b73, #0f2642);
+        }
+
+        .expertise-text h3 {
+            font-size: 1.9rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.02rem;
+        }
+
+        .expertise-text p {
+            opacity: 0.8;
+            font-size: 1rem;
+            max-width: 460px;
+        }
+
+        .expertise-btn {
+            background: white;
+            color: #13294b;
+            border: none;
+            padding: 0.9rem 2.6rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 10px 15px -5px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .expertise-btn:hover {
+            background: #f5f2ee;
+            transform: scale(1.02);
+        }
+
+        /* recent articles + sidebar layout */
+        .two-col {
+            display: flex;
+            gap: 3.5rem;
+            margin: 3rem 0 3.5rem;
+            flex-wrap: wrap;
+        }
+
+        .articles-main {
+            flex: 2.5;
+            min-width: 300px;
+        }
+
+        .sidebar {
+            flex: 1.3;
+            min-width: 250px;
+        }
+
+        .list-item {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #e7ecf3;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-icon {
+            background: #eef4fa;
+            width: 50px;
+            height: 50px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #13294b;
+            font-size: 1.4rem;
+        }
+
+        .list-content h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #162b42;
+        }
+
+        .list-content p {
+            color: #4d688b;
+            font-size: 0.85rem;
+        }
+
+        .sidebar-widget {
+            background: #f6f9fe;
+            border-radius: 28px;
+            padding: 2rem 1.6rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e3eaf3;
+        }
+
+        .sidebar-widget h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: #0f2842;
+            border-left: 3px solid #a88763;
+            padding-left: 1rem;
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            margin: 0.3rem 0.3rem;
+            border: 1px solid #cfdeef;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1f3f62;
+            transition: 0.1s;
+        }
+
+        .topic-tag:hover {
+            background: #13294b;
+            color: white;
+            border-color: #13294b;
+        }
+
+        .newsletter-box {
+            background: white;
+            border-radius: 20px;
+            padding: 1.6rem;
+            text-align: center;
+            border: 1px solid #dde5f0;
+        }
+
+        .newsletter-box p {
+            margin: 1rem 0;
+            color: #345174;
+        }
+
+        .newsletter-input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 40px;
+            border: 1px solid #bccfdf;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .newsletter-btn {
+            background: #13294b;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            width: 100%;
+            margin-top: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* footer */
+        .site-footer {
+            background: #0f233b;
+            color: #dfe9f2;
+            padding: 3rem 0 2rem;
+            margin-top: 3.5rem;
+            border-top: 1px solid #2d4665;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #b7cfec;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid #273f5c;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* responsive */
+        @media (max-width: 700px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px 0;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fas fa-scale-balanced"></i></div>
+                <div class="logo-text">
+                    <h1>LexForum</h1>
+                    <span>counsels & commentary</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Articles</a>
+                <a href="#">Practices</a>
+                <a href="#">About</a>
+                <a href="#">Resources</a>
+                <a href="#" class="btn-consult"><i class="fas fa-gavel"></i> Free consult</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge"><i class="fas fa-book-open"></i> LEGAL INSIGHTS · SINCE 2008</span>
+                    <h2>Where legal expertise <i>meets</i> clear writing</h2>
+                    <p class="hero-desc">Trusted analysis from seasoned practitioners. Corporate, IP, litigation & compliance — distilled for professionals.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">articles</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">practice areas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">avvo rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-gavel"></i> 
+                    <i class="fas fa-file-lines"></i>
+                    <span>LexForum library</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- featured blog posts -->
+            <div>
+                <h2 class="section-title">Recent briefs & analysis</h2>
+                <div class="section-sub">timely legal perspectives you can use</div>
+            </div>
+            <div class="blog-grid">
+                <article class="post-card">
+                    <span class="card-category"><i class="fas fa-building"></i> CORPORATE</span>
+                    <h3>SEC climate disclosure rule: what general counsel must do now</h3>
+                    <div class="post-meta"><span><i class="far fa-calendar"></i> May 12, 2025</span> <span><i class="far fa-clock"></i> 7 min read</span></div>
+                    <p class="excerpt">Final guidelines expand scope 3 reporting. Practical steps for compliance committees and risk protocols.</p>
+                    <a href="#" class="read-link">Read full opinion <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="post-card">
+                    <span class="card-category"><i class="fas fa-scale-balanced"></i> LITIGATION</span>
+                    <h3>Attorney‑client privilege in internal investigations</h3>
+                    <div class="post-meta"><span><i class="far fa-calendar"></i> Apr 28, 2025</span> <span><i class="far fa-clock"></i> 11 min read</span></div>
+                    <p class="excerpt">New second circuit ruling refines “dominant purpose” test. Protect your internal probes.</p>
+                    <a href="#" class="read-link">Read full opinion <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="post-card">
+                    <span class="card-category"><i class="fas fa-file-signature"></i> CONTRACT</span>
+                    <h3>Force majeure & AI failures: drafting resilient clauses</h3>
+                    <div class="post-meta"><span><i class="far fa-calendar"></i> Apr 15, 2025</span> <span><i class="far fa-clock"></i> 6 min read</span></div>
+                    <p class="excerpt">With algorithmic disruptions on the rise, how to future‑proof your commercial agreements.</p>
+                    <a href="#" class="read-link">Read full opinion <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+
+            <!-- two column layout (latest + sidebar) -->
+            <div class="two-col">
+                <div class="articles-main">
+                    <h3 style="font-size: 1.8rem; font-weight: 600; color:#13294b; margin-bottom: 1.5rem;">⚖️  latest updates</h3>
+                    
+                    <div class="list-item">
+                        <div class="list-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="list-content">
+                            <h4>Supreme court narrows whistleblower protections</h4>
+                            <p>By Helena Crane · 2 days ago · Employment law</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="fas fa-coins"></i></div>
+                        <div class="list-content">
+                            <h4>Tax implications of cross‑border ESOPs</h4>
+                            <p>By Raj Mehta · 4 days ago · Tax / Employee benefits</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="fas fa-laptop"></i></div>
+                        <div class="list-content">
+                            <h4>GDPR update: tracking pixels and consent</h4>
+                            <p>By Sophia Laurent · 6 days ago · Privacy</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="fas fa-trademark"></i></div>
+                        <div class="list-content">
+                            <h4>TTAB addresses bad faith in metaverse marks</h4>
+                            <p>By David Okafor · 1 week ago · IP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h4>📂  practice areas</h4>
+                        <div>
+                            <span class="topic-tag">corporate</span>
+                            <span class="topic-tag">litigation</span>
+                            <span class="topic-tag">IP/patent</span>
+                            <span class="topic-tag">tax</span>
+                            <span class="topic-tag">real estate</span>
+                            <span class="topic-tag">compliance</span>
+                            <span class="topic-tag">privacy</span>
+                            <span class="topic-tag">mergers</span>
+                            <span class="topic-tag">bankruptcy</span>
+                            <span class="topic-tag">employment</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>📌  featured contributor</h4>
+                        <p style="margin-bottom: 6px;"><strong>Anne Morrow, Esq.</strong> — former federal prosecutor, now white‑collar defense.</p>
+                        <p style="font-size:0.9rem;">"Recent FCPA enforcement trends every GC should watch."</p>
+                        <a href="#" style="color:#13294b; font-weight:600; display:inline-block; margin-top:10px;">Read专栏 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="newsletter-box">
+                        <i class="fas fa-envelope-open-text" style="font-size:2rem; color:#13294b;"></i>
+                        <h4 style="margin: 10px 0 0;">LexBrief</h4>
+                        <p>Weekly digest of case law and regulatory updates.</p>
+                        <input type="email" placeholder="Your work email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe →</button>
+                        <p style="font-size:0.7rem; margin-top:8px;">No spam, only legal analysis</p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- expertise callout -->
+            <div class="expertise-bar">
+                <div class="expertise-text">
+                    <h3>Need a second opinion?</h3>
+                    <p>Our network of 50+ attorneys offers informal counsel — tap into specialized expertise.</p>
+                </div>
+                <button class="expertise-btn"><i class="fas fa-headset"></i> Ask a professional</button>
+            </div>
+
+            <!-- second row of cards (just to fill) -->
+            <div style="margin: 2rem 0;">
+                <h2 class="section-title" style="font-size: 1.8rem;">📘  essential reads</h2>
+            </div>
+            <div class="blog-grid" style="margin-top: 0.5rem;">
+                <article class="post-card">
+                    <span class="card-category"><i class="fas fa-handcuffs"></i> CRIMINAL</span>
+                    <h3>Bail reform and preventive detention: state by state</h3>
+                    <p class="excerpt"> overview of 2025 statutory changes and constitutional challenges.</p>
+                    <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="post-card">
+                    <span class="card-category"><i class="fas fa-city"></i> REAL ESTATE</span>
+                    <h3>Zoning for affordable housing: inclusionary tools</h3>
+                    <p class="excerpt">How developers and municipalities can navigate new mandates.</p>
+                    <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="post-card">
+                    <span class="card-category"><i class="fas fa-robot"></i> AI & LAW</span>
+                    <h3>Copyright office report on generative AI</h3>
+                    <p class="excerpt">Human authorship requirement remains — implications for prompt engineers.</p>
+                    <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5><i class="fas fa-scale-balanced"></i> LexForum</h5>
+                    <p>Authoritative legal blog for practitioners and in‑house teams.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Navigate</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">All articles</a></li>
+                        <li><a href="#">Contributors</a></li>
+                        <li><a href="#">Podcast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Expert requests</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Legal research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="#"><i class="far fa-envelope"></i> editors@lexforum.com</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-bluesky"></i> Bluesky</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 LexForum — professional legal analysis. This website does not provide legal advice; attorney advertising.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
