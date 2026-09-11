@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>AutoTimegist - Expert Car Reviews, News & Buying Guides 2026</title>
     <meta name="title" content="AutoTimegist - Expert Car Reviews, News & Buying Guides 2026">
@@ -12,7 +12,7 @@
     <meta name="author" content="AutoTimegist Team">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <meta property="og:site_name" content="AutoTimegist">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://autotimegist.com/">
@@ -21,25 +21,686 @@
     <meta property="og:image" content="https://autotimegist.com/src/homepage.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://autotimegist.com/">
     <meta name="twitter:title" content="AutoTimegist - Expert Car Reviews, News & Buying Guides 2026">
     <meta name="twitter:description" content="Your trusted source for professional car reviews, automotive news, expert buying guides, comparisons, and maintenance tips.">
     <meta name="twitter:image" content="https://autotimegist.com/src/homepage.webp">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://autotimegist.com/">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+/* ==========================================================================
+   AutoTimegist — Homepage Stylesheet (v2 "Pit Lane" design)
+   Inlined directly on this page so nothing external can go stale.
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+:root {
+    --ink: #111110;
+    --ink-soft: #43423d;
+    --paper: #f5f2ea;
+    --surface: #ffffff;
+    --line: #e2ddcd;
+    --accent: #d7ff3f;
+    --accent-ink: #1c2408;
+    --signal: #ff4e2a;
+    --muted: #8a877d;
+    --radius: 3px;
+    --maxw: 1320px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+.wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.6rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); transform: translateY(-2px); }
+
+.btn-accent {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+}
+
+.btn-accent:hover { background: var(--ink); color: var(--accent); border-color: var(--ink); }
+
+.topbar {
+    background: var(--ink);
+    color: var(--paper);
+    overflow: hidden;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+}
+
+.topbar-inner { display: flex; align-items: stretch; }
+
+.topbar-tag {
+    flex-shrink: 0;
+    background: var(--signal);
+    color: var(--ink);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.ticker { flex: 1; overflow: hidden; display: flex; align-items: center; position: relative; }
+
+.ticker-track {
+    display: flex;
+    gap: 3rem;
+    white-space: nowrap;
+    animation: ticker-scroll 32s linear infinite;
+    padding-left: 1rem;
+}
+
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-track a { text-decoration: none; color: var(--paper); opacity: 0.85; }
+.ticker-track a:hover { color: var(--accent); opacity: 1; }
+
+@keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    transition: box-shadow 0.2s ease;
+}
+
+.site-header.is-scrolled { box-shadow: 0 6px 20px rgba(17,17,16,0.08); }
+
+.header-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 1.1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--ink);
+}
+
+.brand-mark {
+    background: var(--ink);
+    color: var(--accent);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius);
+    font-size: 1.3rem;
+}
+
+.main-nav { display: flex; gap: 2.1rem; list-style: none; }
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.92rem;
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 3px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.is-active::after { width: 100%; }
+
+.header-actions { display: flex; align-items: center; gap: 1rem; }
+
+.icon-btn {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+
+.icon-btn:hover { border-color: var(--ink); }
+
+.mobile-toggle { display: none; }
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    padding: 1rem 2rem 1.5rem;
+    gap: 0.9rem;
+}
+
+.mobile-nav.is-open { display: flex; }
+.mobile-nav a { text-decoration: none; color: var(--ink); font-weight: 600; }
+
+.hero {
+    position: relative;
+    margin-top: 1px;
+    min-height: 78vh;
+    display: flex;
+    align-items: flex-end;
+    color: var(--paper);
+    overflow: hidden;
+    background: var(--ink);
+}
+
+.hero-media { position: absolute; inset: 0; background-size: cover; background-position: center; }
+
+.hero-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(17,17,16,0.15) 0%, rgba(17,17,16,0.55) 55%, rgba(17,17,16,0.94) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 3.5rem 2rem;
+    width: 100%;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.2rem;
+}
+
+.hero-title {
+    font-size: clamp(2.1rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.08;
+    max-width: 820px;
+    margin-bottom: 1.2rem;
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(245,242,234,0.75);
+    margin-bottom: 1.6rem;
+}
+
+.hero-meta i { color: var(--accent); margin-right: 0.35rem; }
+.hero-meta a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); }
+
+.headline-strip { background: var(--surface); border-bottom: 1px solid var(--line); }
+
+.headline-strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+
+.headline-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.4rem 1.5rem;
+    text-decoration: none;
+    color: var(--ink);
+    border-left: 1px solid var(--line);
+    transition: background 0.15s ease;
+}
+
+.headline-item:hover { background: var(--paper); }
+
+.headline-num { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--muted); }
+.headline-item:hover .headline-num { color: var(--signal); }
+.headline-text { font-weight: 600; font-size: 0.92rem; line-height: 1.4; }
+
+.stat-strip { background: var(--ink); color: var(--paper); }
+
+.stat-strip .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.6rem 2rem;
+    gap: 1.5rem;
+}
+
+.stat { text-align: left; }
+.stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(245,242,234,0.65); }
+
+.section { padding-top: 4rem; padding-bottom: 1rem; }
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-title { font-size: 1.9rem; font-weight: 700; }
+
+.section-title small {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 0.4rem;
+}
+
+.section-link {
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.15rem;
+}
+
+.section-link:hover { color: var(--signal); border-color: var(--signal); }
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 2.5rem;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--muted);
+    padding: 0.9rem 1.1rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+}
+
+.tab:hover { color: var(--ink); }
+.tab.is-active { color: var(--ink); border-color: var(--accent); }
+
+.story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem 2rem; }
+
+.story-card {
+    display: block;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.6rem;
+}
+
+.story-thumb {
+    position: relative;
+    display: block;
+    margin-bottom: 1.1rem;
+    background: var(--line);
+    line-height: 0;
+}
+
+.story-thumb img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.story-badge {
+    position: absolute;
+    top: 0.8rem; left: 0.8rem;
+    background: var(--ink);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius);
+}
+
+.story-badge.is-breaking { background: var(--signal); color: var(--ink); }
+
+.story-rating {
+    position: absolute;
+    top: 0.8rem; right: 0.8rem;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.story-cat {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 0.5rem;
+}
+
+.story-title { font-size: 1.15rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.6rem; }
+.story-title a { text-decoration: none; color: inherit; }
+.story-card:hover .story-title a { color: var(--signal); }
+
+.story-meta { font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 1rem; }
+.story-meta i { color: var(--signal); margin-right: 0.25rem; }
+.story-meta a { color: inherit; }
+
+.vs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.vs-card { text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); }
+
+.vs-media { display: flex; height: 170px; position: relative; background: var(--line); }
+
+.vs-media img,
+.vs-media .vs-img { flex: 1; object-fit: cover; width: 100%; height: 100%; background-size: cover; background-position: center; }
+
+.vs-chip {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border: 3px solid var(--paper);
+}
+
+.vs-tag {
+    position: absolute;
+    bottom: 0.6rem; left: 0.6rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+}
+
+.vs-body { padding: 1.3rem; }
+.vs-title { font-size: 1.02rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.9rem; }
+
+.vs-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 0.8rem;
+}
+
+.guide-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
+
+.guide-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 0;
+    overflow: hidden;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.guide-card:hover { border-color: var(--ink); transform: translateY(-3px); }
+
+.guide-thumb { display: block; line-height: 0; background: var(--line); }
+.guide-thumb img { width: 100%; height: 170px; object-fit: cover; display: block; }
+
+.guide-body { padding: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; }
+
+.guide-cat { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--signal); }
+.guide-title { font-weight: 700; font-size: 1rem; line-height: 1.4; }
+.guide-title a { text-decoration: none; color: inherit; }
+.guide-card:hover .guide-title a { color: var(--signal); }
+.guide-author { font-size: 0.8rem; color: var(--muted); margin-top: auto; }
+
+.newsletter-band { background: var(--ink); color: var(--paper); margin-top: 4rem; padding: 4rem 0; }
+
+.newsletter-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.newsletter-band h2 { font-size: 2rem; margin-bottom: 0.6rem; }
+.newsletter-band p { color: rgba(245,242,234,0.7); max-width: 460px; }
+
+.newsletter-form { display: flex; gap: 0; border-bottom: 2px solid var(--accent); }
+
+.newsletter-form input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--paper);
+    padding: 0.9rem 0.2rem;
+    font-size: 1rem;
+    outline: none;
+    font-family: var(--font-body);
+}
+
+.newsletter-form input::placeholder { color: rgba(245,242,234,0.5); }
+
+.newsletter-form button {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 0.4rem;
+    font-size: 0.95rem;
+}
+
+.newsletter-form button:hover { color: var(--paper); }
+
+.newsletter-note { margin-top: 0.8rem; font-size: 0.82rem; color: var(--accent); min-height: 1.2em; }
+
+.site-footer { background: var(--paper); border-top: 1px solid var(--line); padding: 3.5rem 0 1.5rem; }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.footer-brand { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; }
+
+.footer-col h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+    color: var(--muted);
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-col a { text-decoration: none; color: var(--ink); font-size: 0.92rem; }
+.footer-col a:hover { color: var(--signal); }
+
+.footer-bottom {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 1.5rem 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Search overlay */
+.search-overlay { position: fixed; inset: 0; background: rgba(17,17,16,0.75); z-index: 2000; display: none; padding: 8vh 1.25rem 2rem; overflow-y: auto; }
+.search-overlay.is-open { display: block; }
+.search-panel { max-width: 680px; margin: 0 auto; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.search-bar { display: flex; align-items: center; gap: 0.8rem; padding: 1rem 1.2rem; border-bottom: 1px solid var(--line); background: var(--surface); }
+.search-bar i { color: var(--muted); }
+.search-input { flex: 1; border: none; background: none; outline: none; font-family: var(--font-body); font-size: 1.05rem; color: var(--ink); min-width: 0; }
+.search-close { border: none; background: none; cursor: pointer; color: var(--muted); font-size: 1.1rem; padding: 0.2rem 0.4rem; }
+.search-close:hover { color: var(--ink); }
+.search-results { max-height: 62vh; overflow-y: auto; }
+.search-hint { padding: 1.4rem 1.3rem; font-size: 0.9rem; color: var(--muted); }
+.search-hit { display: block; padding: 0.9rem 1.3rem; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+.search-hit:last-child { border-bottom: none; }
+.search-hit:hover { background: var(--surface); }
+.search-hit-cat { display: block; font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 0.25rem; }
+.search-hit-title { font-weight: 600; font-size: 0.95rem; line-height: 1.4; }
+.search-hit-title mark { background: var(--accent); color: var(--accent-ink); padding: 0 0.1em; }
+.icon-btn.is-copied { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+.to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    z-index: 900;
+}
+
+.to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.to-top:hover { background: var(--accent); color: var(--accent-ink); }
+
+@media (max-width: 1080px) {
+    .story-grid, .vs-grid { grid-template-columns: repeat(2, 1fr); }
+    .guide-grid { grid-template-columns: repeat(2, 1fr); }
+    .headline-strip .wrap { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .main-nav { display: none; }
+    .mobile-toggle { display: flex; }
+    .header-actions { gap: 0.6rem; }
+    .wrap { padding: 0 1.25rem; }
+    .header-inner { padding: 1rem 1.25rem; }
+    .hero-content { padding: 2.5rem 1.25rem; }
+    .newsletter-inner { padding: 0 1.25rem; }
+    .footer-bottom { padding: 1.5rem 1.25rem 0; }
+    .stat-strip .wrap { padding: 1.4rem 1.25rem; }
+    .headline-item { padding: 1.2rem 1.25rem; }
+    .section { padding-top: 2.5rem; }
+    .section-title { font-size: 1.5rem; }
+    .story-grid, .vs-grid, .guide-grid { grid-template-columns: 1fr; }
+    .newsletter-inner { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .hero { min-height: 92vh; }
+    .headline-strip .wrap { grid-template-columns: 1fr; }
+    .headline-item { border-left: none; border-top: 1px solid var(--line); }
+    .story-thumb img { height: 200px; }
+    .guide-thumb img { height: 190px; }
+}
+    </style>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R6VEPKB7D"></script>
@@ -52,7 +713,6 @@
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5536270391382476"
      crossorigin="anonymous"></script>
-
 
     <!-- Schema Markup for Website -->
     <script type="application/ld+json">
@@ -69,1794 +729,658 @@
         }
     }
     </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #e63946;
-            --secondary-color: #1e1e2f;
-            --accent-color: #ffb347;
-            --text-dark: #2d3436;
-            --text-light: #636e72;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 5px 15px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background: var(--bg-light);
-        }
-
-        .header {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--primary-color);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: var(--bg-light);
-            border-radius: 30px;
-            padding: 0.5rem 1rem;
-        }
-
-        .search-box input {
-            border: none;
-            background: transparent;
-            padding: 0.3rem;
-            outline: none;
-        }
-
-        .search-box i {
-            color: var(--text-light);
-            cursor: pointer;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section - News Focused */
-        .hero-news {
-            margin-top: 80px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 2rem 2rem 1rem;
-        }
-
-        .hero-news-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-news-header h2 {
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-            position: relative;
-            padding-left: 1rem;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .hero-news-header .section-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .hero-news-header .section-link:hover {
-            gap: 0.8rem;
-        }
-
-        .hero-news-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-        }
-
-        .hero-feature {
-            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
-            color: white;
-            border-radius: 20px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-feature-image {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .hero-feature-content {
-            padding: 2rem;
-        }
-
-        .hero-feature-category {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .hero-feature-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .hero-feature-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-            color: rgba(255,255,255,0.8);
-            font-size: 0.9rem;
-        }
-
-        .hero-feature-meta i {
-            color: var(--primary-color);
-            margin-right: 0.3rem;
-        }
-
-        .hero-feature-meta a {
-            color: white;
-            text-decoration: underline;
-            text-decoration-color: var(--primary-color);
-        }
-
-        .hero-feature-excerpt {
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .hero-side-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-side-image {
-            height: 140px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .hero-side-content {
-            padding: 1.2rem;
-        }
-
-        .hero-side-category {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-side-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
-        }
-
-        .hero-side-title a {
-            text-decoration: none;
-            color: var(--secondary-color);
-        }
-
-        .hero-side-title a:hover {
-            color: var(--primary-color);
-        }
-
-        .hero-side-meta {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .hero-side-meta i {
-            color: var(--primary-color);
-            margin-right: 0.2rem;
-        }
-
-        /* Quick Stats Bar */
-        .stats-bar {
-            max-width: 1400px;
-            margin: 2rem auto 3rem;
-            padding: 1.5rem 2rem;
-            background: var(--white);
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-around;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Section Header */
-        .section-header {
-            max-width: 1400px;
-            margin: 3rem auto 1.5rem;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .section-header h2 {
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-            position: relative;
-            padding-left: 1rem;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .section-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .section-link:hover {
-            gap: 0.8rem;
-        }
-
-        /* Category Pills */
-        .category-pills {
-            max-width: 1400px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            justify-content: center;
-        }
-
-        .pill {
-            padding: 0.6rem 1.5rem;
-            border-radius: 40px;
-            background: var(--white);
-            color: var(--text-dark);
-            font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .pill:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .pill i {
-            font-size: 1rem;
-        }
-
-        /* Grid Layouts */
-        .grid-4 {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .grid-3 {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .grid-2 {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero-news-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .grid-3, .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Card Styles */
-        .content-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .card-image {
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .card-badge {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
-        }
-
-        .card-badge-breaking {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: #e63946;
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        .card-rating {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--secondary-color);
-            color: var(--accent-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            z-index: 2;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-            font-size: 0.8rem;
-        }
-
-        .card-meta i {
-            margin-right: 0.3rem;
-            color: var(--primary-color);
-        }
-
-        .card-title {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--secondary-color);
-            line-height: 1.4;
-        }
-
-        .card-title a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .card-title a:hover {
-            color: var(--primary-color);
-        }
-
-        .card-excerpt {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            flex: 1;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 0.5rem;
-        }
-
-        .read-more {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .read-more:hover {
-            gap: 0.8rem;
-        }
-
-        .card-author {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .card-author a {
-            color: var(--text-light);
-            text-decoration: none;
-            border-bottom: 1px dotted var(--primary-color);
-        }
-
-        .card-author a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Comparison Card with Images */
-        .comparison-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .comparison-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .comparison-images {
-            display: flex;
-            height: 160px;
-            position: relative;
-        }
-
-        .comp-image {
-            flex: 1;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .comp-image.left {
-            border-right: 2px solid white;
-        }
-
-        .vs-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.2rem;
-            z-index: 5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            border: 2px solid white;
-        }
-
-        .comp-badge {
-            position: absolute;
-            top: 0.5rem;
-            left: 0.5rem;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            z-index: 6;
-        }
-
-        .comp-content {
-            padding: 1.2rem;
-        }
-
-        .comp-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-            font-size: 0.8rem;
-        }
-
-        .comp-meta i {
-            color: var(--primary-color);
-            margin-right: 0.3rem;
-        }
-
-        .comp-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
-        }
-
-        .comp-title a {
-            text-decoration: none;
-            color: var(--secondary-color);
-        }
-
-        .comp-title a:hover {
-            color: var(--primary-color);
-        }
-
-        .comp-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 0.5rem;
-        }
-
-        /* Newsletter Section */
-        .newsletter-section {
-            max-width: 1400px;
-            margin: 4rem auto;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
-            border-radius: 30px;
-            color: white;
-            text-align: center;
-        }
-
-        .newsletter-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter-section p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
-
-        .newsletter-form {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .newsletter-form input {
-            flex: 1 1 250px;
-            padding: 1rem;
-            border: none;
-            border-radius: 40px;
-            outline: none;
-            font-size: 1rem;
-        }
-
-        .newsletter-form button {
-            padding: 1rem 2rem;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 40px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .newsletter-form button:hover {
-            background: #c72e3a;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--primary-color);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #b2bec3;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: var(--shadow);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .search-box {
-                display: none;
-            }
-
-            .hero-feature-image {
-                height: 200px;
-            }
-
-            .hero-feature-title {
-                font-size: 1.6rem;
-            }
-
-            .category-pills {
-                justify-content: flex-start;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="https://autotimegist.com/">Home</a></li>
+
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span class="topbar-tag">On Track</span>
+            <div class="ticker">
+                <div class="ticker-track">
+                    <a href="https://autotimegist.com/news/toyota-c-hr-ev-recall-software-power-loss-2026">Toyota recalls 8,521 C-HR EVs over power-loss software fault</a>
+                    <a href="https://autotimegist.com/news/jaguar-land-rover-4000-job-cuts-2026">Jaguar Land Rover to cut 4,000 jobs over two years</a>
+                    <a href="https://autotimegist.com/news/kia-record-august-sales-hybrids-2026">Kia posts best US sales month ever as hybrids nearly double</a>
+                    <a href="https://autotimegist.com/news/mitsubishi-pajero-returns-2026">The Mitsubishi Pajero returns with a ladder frame and 2.4 diesel</a>
+                    <a href="https://autotimegist.com/news/polestar-4-suv-launch-2026">Polestar 4 SUV arrives with a rear window, but not for the US</a>
+                    <a href="https://autotimegist.com/news/ev-tax-credit-one-year-later-2026">One year without the $7,500 EV credit: what actually happened</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="https://autotimegist.com/" class="brand"><span class="brand-mark">AT</span> AutoTimegist</a>
+
+            <ul class="main-nav">
+                <li><a href="https://autotimegist.com/" class="is-active">Home</a></li>
                 <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
                 <li><a href="https://autotimegist.com/news">News</a></li>
                 <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
                 <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
-                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance</a></li>
             </ul>
 
-            
-
-            <div class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search"><i class="fas fa-magnifying-glass"></i></button>
+                <button class="icon-btn mobile-toggle" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
             </div>
+        </div>
+        <nav class="mobile-nav">
+            <a href="https://autotimegist.com/">Home</a>
+            <a href="https://autotimegist.com/reviews">Reviews</a>
+            <a href="https://autotimegist.com/news">News</a>
+            <a href="https://autotimegist.com/comparisons">Comparisons</a>
+            <a href="https://autotimegist.com/buying-guides">Buying Guides</a>
+            <a href="https://autotimegist.com/maintenance-tips">Maintenance</a>
         </nav>
     </header>
 
-    <!-- NEWS SECTION - ALWAYS AT TOP -->
-    <div class="hero-news">
-    <div class="hero-news-header">
-        <h2>Latest News & Updates</h2>
-        <a href="https://autotimegist.com/news" class="section-link">View All News <i class="fas fa-arrow-right"></i></a>
-    </div>
-
-    <div class="hero-news-grid">
-        <!-- Main Feature News -->
-        <div class="hero-feature">
-            <div class="hero-feature-image" style="background-image: url('https://autotimegist.com/src/toyota-rav4-hybrid-vs-honda-cr-v-hybrid-2026.webp');">
-                <span class="hero-feature-category" style="background: #e63946; animation: pulse 2s infinite;">HEAD-TO-HEAD COMPARISON</span>
-            </div>
-            <div class="hero-feature-content">
-                <h1 class="hero-feature-title">2026 Toyota RAV4 Hybrid vs Honda CR-V Hybrid: Best Compact Hybrid SUV</h1>
-                <div class="hero-feature-meta">
-                    <span><i class="far fa-calendar"></i> Mar 20, 2026</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                    <span><i class="far fa-clock"></i> 18 min read</span>
-                </div>
-                <p class="hero-feature-excerpt">The all-new RAV4 Hybrid (43 mpg, 236 hp) takes on the refined CR-V Hybrid (38 mpg, 204 hp). Which compact SUV wins for your family?</p>
-                <a href="https://autotimegist.com/toyota-rav4-hybrid-vs-honda-cr-v-hybrid-2026" class="read-more" style="color: white;">Read Full Story <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <!-- News Sidebar - 5 Additional News Stories -->
-        <div class="hero-sidebar">
-
-            <!-- Ford Mustang Mach-E vs Tesla Model Y -->
-            <div class="hero-side-card">
-                <div class="hero-side-image" style="background-image: url('https://autotimegist.com/src/ford-mustang-mach-e-vs-tesla-model-y-2026.webp');">
-                    <span class="hero-side-category">HEAD-TO-HEAD COMPARISON</span>
-                </div>
-                <div class="hero-side-content">
-                    <h3 class="hero-side-title"><a href="https://autotimegist.com/ford-mustang-mach-e-vs-tesla-model-y-2026">Ford Mustang Mach-E vs Tesla Model Y 2026: Which EV SUV Wins?</a></h3>
-                    <div class="hero-side-meta"><i class="far fa-user"></i> Cynthia Ebony • Mar 20, 2026</div>
-                </div>
-            </div>
-
-            <!-- Hyundai Ioniq 5 vs Tesla Model Y -->
-            <div class="hero-side-card">
-                <div class="hero-side-image" style="background-image: url('https://autotimegist.com/src/hyundai-ioniq-5-vs-tesla-model-y-2026.webp');">
-                    <span class="hero-side-category">HEAD-TO-HEAD COMPARISON</span>
-                </div>
-                <div class="hero-side-content">
-                    <h3 class="hero-side-title"><a href="https://autotimegist.com/hyundai-ioniq-5-vs-tesla-model-y-2026">Hyundai Ioniq 5 vs Tesla Model Y 2026: Range, Charging & Value Compared</a></h3>
-                    <div class="hero-side-meta"><i class="far fa-user"></i> Cynthia Ebony • Mar 20, 2026</div>
-                </div>
-            </div>
-
-            <!-- Toyota Prius vs Hyundai Elantra Hybrid -->
-            <div class="hero-side-card">
-                <div class="hero-side-image" style="background-image: url('https://autotimegist.com/src/toyota-prius-vs-hyundai-elantra-hybrid-2026.webp');">
-                    <span class="hero-side-category">HEAD-TO-HEAD COMPARISON</span>
-                </div>
-                <div class="hero-side-content">
-                    <h3 class="hero-side-title"><a href="https://autotimegist.com/toyota-prius-vs-hyundai-elantra-hybrid-2026">Toyota Prius Hybrid vs Hyundai Elantra Hybrid 2026 Comparison</a></h3>
-                    <div class="hero-side-meta"><i class="far fa-user"></i> Cynthia Ebony • Mar 20, 2026</div>
-                </div>
-            </div>
-
-            <!-- Rivian R2 vs Tesla Model Y -->
-            <div class="hero-side-card">
-                <div class="hero-side-image" style="background-image: url('https://autotimegist.com/src/rivian-r2-vs-tesla-model-y-2026.webp');">
-                    <span class="hero-side-category">HEAD-TO-HEAD COMPARISON</span>
-                </div>
-                <div class="hero-side-content">
-                    <h3 class="hero-side-title"><a href="https://autotimegist.com/rivian-r2-vs-tesla-model-y-2026">Rivian R2 vs Tesla Model Y 2026: The Next Big Electric SUV Battle</a></h3>
-                    <div class="hero-side-meta"><i class="far fa-user"></i> Cynthia Ebony • Mar 20, 2026</div>
-                </div>
-            </div>
-
-            <!-- Toyota RAV4 vs CR-V Hybrid (Bonus) -->
-            <div class="hero-side-card">
-                <div class="hero-side-image" style="background-image: url('https://autotimegist.com/src/tesla-model-y-vs-chevrolet-equinox-ev-2026.webp');">
-                    <span class="hero-side-category">HEAD-TO-HEAD COMPARISON</span>
-                </div>
-                <div class="hero-side-content">
-                    <h3 class="hero-side-title"><a href="https://autotimegist.com/tesla-model-y-vs-chevrolet-equinox-ev-2026">Tesla Model Y vs Chevrolet Equinox EV 2026: Best Budget Electric SUV?</a></h3>
-                    <div class="hero-side-meta"><i class="far fa-user"></i> Cynthia Ebony • Mar 20, 2026</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-    <!-- Quick Stats Bar -->
-    <div class="stats-bar">
-        <div class="stat-item">
-            <div class="stat-number">78+</div>
-            <div class="stat-label">Total Articles</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">18</div>
-            <div class="stat-label">News Stories</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">300+</div>
-            <div class="stat-label">Vehicles Tested</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">5</div>
-            <div class="stat-label">Expert Writers</div>
-        </div>
-    </div>
-
-    <!-- Category Pills -->
-    <div class="category-pills">
-        <a href="https://autotimegist.com/reviews" class="pill"><i class="fas fa-star"></i> Reviews (18)</a>
-        <a href="https://autotimegist.com/comparisons" class="pill"><i class="fas fa-scale-balanced"></i> Comparisons (18)</a>
-        <a href="https://autotimegist.com/buying-guides" class="pill"><i class="fas fa-compass"></i> Buying Guides (12)</a>
-        <a href="https://autotimegist.com/maintenance-tips" class="pill"><i class="fas fa-wrench"></i> Maintenance Tips (12)</a>
-        <a href="https://autotimegist.com/news" class="pill" style="background: var(--primary-color); color: white;"><i class="fas fa-newspaper"></i> News (18)</a>
-    </div>
-
-
-
-    <!-- LATEST REVIEWS SECTION (8 reviews) -->
-    <div class="section-header" style="margin-top: 2rem;">
-        <h2>Latest Car Reviews</h2>
-        <a href="https://autotimegist.com/reviews" class="section-link">View All Reviews <i class="fas fa-arrow-right"></i></a>
-    </div>
-
-    <div class="grid-4">
-
-    <!-- BMW 550e xDrive -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/bmw-550e-xdrive-2026-review.webp');">
-            <span class="card-badge">Plug-in Hybrid</span>
-            <span class="card-rating">9.0</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 16</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/bmw-550e-xdrive-2026-review">
-                    2026 BMW 550e xDrive Review: Luxury Plug-In Hybrid with Serious Power
-                </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/bmw-550e-xdrive-2026-review" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Porsche Cayenne Electric -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/porsche-cayenne-electric-2026-review.webp');">
-            <span class="card-badge">Performance EV</span>
-            <span class="card-rating">9.3</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 16</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/porsche-cayenne-electric-2026-review">
-                    Porsche Cayenne Electric Review: How Good Is the 2026 Performance SUV?
-                </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/porsche-cayenne-electric-2026-review" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toyota Prius Prime -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/toyota-prius-prime-2026-review.webp');">
-            <span class="card-badge">Hybrid</span>
-            <span class="card-rating">9.1</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 16</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/toyota-prius-prime-2026-review">
-                    Toyota Prius Prime Review: Why the 2026 Plug-In Hybrid Is So Popular
-                </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/toyota-prius-prime-2026-review" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Subaru Forester Hybrid -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/subaru-forester-hybrid-2026-review.webp');">
-            <span class="card-badge">Hybrid SUV</span>
-            <span class="card-rating">8.8</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 16</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/subaru-forester-hybrid-2026-review">
-                    Subaru Forester Hybrid Review (2026): The Most Reliable Compact SUV Yet?
-                </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/subaru-forester-hybrid-2026-review" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Chevrolet Equinox EV -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/chevrolet-equinox-ev-2026-review.webp');">
-            <span class="card-badge">Affordable EV</span>
-            <span class="card-rating">8.9</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 16</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/chevrolet-equinox-ev-2026-review">
-                    Chevrolet Equinox EV 2026 Review: The Affordable Electric SUV Everyone Wants
-                </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/chevrolet-equinox-ev-2026-review" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tesla Model 3 Highland -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/tesla-model-3-highland-2026-review.webp');">
-            <span class="card-badge">Electric Sedan</span>
-            <span class="card-rating">9.2</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 16</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/tesla-model-3-highland-2026-review">
-                    Tesla Model 3 Highland Review: Is the 2026 Update Worth Buying?
-                </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/tesla-model-3-highland-2026-review" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-        
-    </div>
-    <!-- MORE NEWS - SECOND ROW (8 additional news) -->
-    <div class="section-header" style="margin-top: 2rem;">
-        <h2>Breaking News</h2>
-        <a href="https://autotimegist.com/reviews" class="section-link">View All Reviews <i class="fas fa-arrow-right"></i></a>
-    </div>
-
-    <div class="grid-4">
-
-    <!-- China Green Auto Plan -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/china-new-plan-smarter-greener-auto-industry.webp');">
-            <span class="card-badge">POLICY</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 6</span>
+    <!-- Hero: newest story -->
+    <section class="hero">
+        <div class="hero-media" style="background-image:url('https://autotimegist.com/src/toyota-c-hr-ev-recall-2026.webp');"></div>
+        <div class="hero-content">
+            <span class="eyebrow"><i class="fas fa-triangle-exclamation"></i> Breaking</span>
+            <h1 class="hero-title">Toyota Recalls 8,521 C-HR EVs Over Software Fault That Can Cut Power</h1>
+            <div class="hero-meta">
+                <span><i class="far fa-calendar"></i> Sep 11, 2026</span>
                 <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                <span><i class="far fa-clock"></i> 5 min read</span>
             </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/news/china-new-plan-smarter-greener-auto-industry">
-                    China Unveils New Plan for a Smarter, Greener Automotive Industry
+            <a href="https://autotimegist.com/news/toyota-c-hr-ev-recall-software-power-loss-2026" class="btn btn-accent">Read Full Story <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Secondary headlines: next newest -->
+    <section class="headline-strip">
+        <div class="wrap">
+            <a href="https://autotimegist.com/news/jaguar-land-rover-4000-job-cuts-2026" class="headline-item">
+                <span class="headline-num">01</span>
+                <span class="headline-text">Jaguar Land Rover to Cut 4,000 Jobs as Chinese Rivals and Tariffs Bite</span>
+            </a>
+            <a href="https://autotimegist.com/news/kia-record-august-sales-hybrids-2026" class="headline-item">
+                <span class="headline-num">02</span>
+                <span class="headline-text">Kia Posts Best US Sales Month Ever as Hybrid Sales Nearly Double</span>
+            </a>
+            <a href="https://autotimegist.com/news/mitsubishi-pajero-returns-2026" class="headline-item">
+                <span class="headline-num">03</span>
+                <span class="headline-text">The Mitsubishi Pajero Is Back: Ladder Frame, 2.4 Diesel, No US Plans</span>
+            </a>
+            <a href="https://autotimegist.com/news/ev-tax-credit-one-year-later-2026" class="headline-item">
+                <span class="headline-num">04</span>
+                <span class="headline-text">One Year Without the $7,500 EV Credit: What Actually Happened</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <!-- <section class="stat-strip">
+        <div class="wrap">
+            <div class="stat"><div class="stat-num">78+</div><div class="stat-label">Total Articles</div></div>
+            <div class="stat"><div class="stat-num">18</div><div class="stat-label">News Stories</div></div>
+            <div class="stat"><div class="stat-num">300+</div><div class="stat-label">Vehicles Tested</div></div>
+            <div class="stat"><div class="stat-num">5</div><div class="stat-label">Expert Writers</div></div>
+        </div>
+    </section> -->
+
+    <!-- Latest News -->
+    <section class="section wrap">
+        <div class="section-head">
+            <h2 class="section-title"><small>Breaking industry updates</small>Latest News</h2>
+            <a href="https://autotimegist.com/news" class="section-link">View All News <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="story-grid">
+            <article class="story-card">
+                <a class="story-thumb" href="https://autotimegist.com/news/toyota-c-hr-ev-recall-software-power-loss-2026">
+                    <img src="https://autotimegist.com/src/toyota-c-hr-ev-recall-2026.webp" alt="Toyota C-HR EV" loading="lazy">
+                    <span class="story-badge is-breaking">Breaking</span>
                 </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/news/china-new-plan-smarter-greener-auto-industry" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
+                <p class="story-cat">Recall</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/news/toyota-c-hr-ev-recall-software-power-loss-2026">Toyota Recalls 8,521 C-HR EVs Over Software Fault That Can Cut Power</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Sep 11</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                </p>
+            </article>
 
-    <!-- Chery iCAR Launch -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/chery-icar-ev-strategy-launch-2026.webp');">
-            <span class="card-badge">PRODUCT NEWS</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 6</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/news/chery-icar-ev-strategy-launch-2026">
-                    Chery Expands EV Strategy With New iCAR SUV Brand Launch in 2026
+            <article class="story-card">
+                <a class="story-thumb" href="https://autotimegist.com/news/jaguar-land-rover-4000-job-cuts-2026">
+                    <img src="https://autotimegist.com/src/jaguar-land-rover-job-cuts-2026.webp" alt="Jaguar Land Rover" loading="lazy">
+                    <span class="story-badge">Industry</span>
                 </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/news/chery-icar-ev-strategy-launch-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
+                <p class="story-cat">Industry News</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/news/jaguar-land-rover-4000-job-cuts-2026">Jaguar Land Rover to Cut 4,000 Jobs as Chinese Rivals and Tariffs Bite</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Sep 11</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                </p>
+            </article>
 
-    <!-- Hyundai Awards -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/hyundai-world-car-awards-2026-finalists.webp');">
-            <span class="card-badge">AWARDS</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 6</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/news/hyundai-world-car-awards-2026-finalists">
-                    Hyundai Reaches World Car Awards 2026 Finalist List With Multiple Models
+            <article class="story-card">
+                <a class="story-thumb" href="https://autotimegist.com/news/kia-record-august-sales-hybrids-2026">
+                    <img src="https://autotimegist.com/src/kia-record-august-sales-2026.webp" alt="Kia showroom" loading="lazy">
+                    <span class="story-badge">Market</span>
                 </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/news/hyundai-world-car-awards-2026-finalists" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
+                <p class="story-cat">Market</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/news/kia-record-august-sales-hybrids-2026">Kia Posts Best US Sales Month Ever as Hybrid Sales Nearly Double</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Sep 11</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                </p>
+            </article>
 
-    <!-- BMW Earnings Pressure -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/bmw-pressure-earnings-challenges-2026.webp');">
-            <span class="card-badge-breaking">BREAKING</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 6</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/news/bmw-pressure-earnings-challenges-2026">
-                    BMW Faces Pressure Ahead of Earnings as Legal and Operational Challenges Mount
+            <article class="story-card">
+                <a class="story-thumb" href="https://autotimegist.com/news/mitsubishi-pajero-returns-2026">
+                    <img src="https://autotimegist.com/src/mitsubishi-pajero-2026.webp" alt="Mitsubishi Pajero" loading="lazy">
+                    <span class="story-badge">New Model</span>
                 </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/news/bmw-pressure-earnings-challenges-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
+                <p class="story-cat">New Model</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/news/mitsubishi-pajero-returns-2026">The Mitsubishi Pajero Is Back: Ladder Frame, 2.4 Diesel, No US Plans</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Sep 11</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                </p>
+            </article>
 
-    <!-- Global Car Sales -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/global-car-sales-surge-february-2026.webp');">
-            <span class="card-badge">MARKET</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 6</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/news/global-car-sales-surge-february-2026">
-                    Global Car Sales Surge in February 2026 as Rural Demand Drives 25% Market Growth
+            <article class="story-card">
+                <a class="story-thumb" href="https://autotimegist.com/news/polestar-4-suv-launch-2026">
+                    <img src="https://autotimegist.com/src/polestar-4-suv-2026.webp" alt="Polestar 4 SUV" loading="lazy">
+                    <span class="story-badge">New Model</span>
                 </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/news/global-car-sales-surge-february-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
+                <p class="story-cat">EV Launch</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/news/polestar-4-suv-launch-2026">Polestar 4 SUV Arrives With a Rear Window - and No US Launch</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Sep 11</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                </p>
+            </article>
 
-    <!-- EU Green Steel Plan -->
-    <div class="content-card">
-        <div class="card-image" style="background-image: url('https://autotimegist.com/src/eu-green-steel-plan-car-emissions-2035.webp');">
-            <span class="card-badge">POLICY</span>
-        </div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span><i class="far fa-calendar"></i> Mar 6</span>
-                <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
-            </div>
-            <h3 class="card-title">
-                <a href="https://autotimegist.com/news/eu-green-steel-plan-car-emissions-2035">
-                    EU Pushes 'Green Steel' Plan to Cut Car Emissions by 2035
+            <article class="story-card">
+                <a class="story-thumb" href="https://autotimegist.com/news/ev-tax-credit-one-year-later-2026">
+                    <img src="https://autotimegist.com/src/ev-tax-credit-one-year-later-2026.webp" alt="EV charging" loading="lazy">
+                    <span class="story-badge">Analysis</span>
                 </a>
-            </h3>
-            <div class="card-footer">
-                <a href="https://autotimegist.com/news/eu-green-steel-plan-car-emissions-2035" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-            </div>
+                <p class="story-cat">Analysis</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/news/ev-tax-credit-one-year-later-2026">One Year Without the $7,500 EV Credit: What Actually Happened</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Sep 11</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/shedrack-olisa">Shedrack Olisa</a></span>
+                </p>
+            </article>
+
         </div>
-    </div>
+    </section>
 
-
-    </div>
-
-    
-
-    <!-- COMPARISONS SECTION (8 comparisons with actual images) -->
-    <div class="section-header" style="margin-top: 2rem;">
-        <h2>Car Comparisons</h2>
-        <a href="https://autotimegist.com/comparisons" class="section-link">View All Comparisons <i class="fas fa-arrow-right"></i></a>
-    </div>
-
-    <div class="grid-4">
-        
-
-        <!-- Ioniq 5 vs 6 -->
-        <div class="comparison-card">
-            <div class="comparison-images">
-                <div class="comp-image left" style="background-image: url('https://autotimegist.com/src/hyundai-ioniq-5-vs-6-2026.webp');"></div>
-                <div class="vs-overlay">VS</div>
-                <span class="comp-badge">Hyundai EVs</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/hyundai-ioniq-5-vs-6-2026">Hyundai Ioniq 5 vs 6 2026: Which One to Buy</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/hyundai-ioniq-5-vs-6-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+    <!-- Latest Reviews -->
+    <section class="section wrap">
+        <div class="section-head">
+            <h2 class="section-title"><small>Fresh off the test track</small>Latest Car Reviews</h2>
+            <a href="https://autotimegist.com/reviews" class="section-link">View All Reviews <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- EV6 vs Ioniq 5 -->
-        <div class="comparison-card">
-            <div class="comparison-images">
-                <div class="comp-image left" style="background-image: url('https://autotimegist.com/src/kia-ev6-vs-hyundai-ioniq-5-2026.webp');"></div>
-                <div class="vs-overlay">VS</div>
-                <span class="comp-badge">Sister Cars</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/kia-ev6-vs-hyundai-ioniq-5-2026">Kia EV6 vs Hyundai Ioniq 5 2026: Sister Cars Battle</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/kia-ev6-vs-hyundai-ioniq-5-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+        <div class="tabs">
+            <button class="tab is-active" data-filter="all">All</button>
+            <button class="tab" data-filter="ev">Electric</button>
+            <button class="tab" data-filter="hybrid">Hybrid</button>
+            <button class="tab" data-filter="suv">SUV</button>
         </div>
 
-        <!-- Model 3 vs i4 -->
-        <div class="comparison-card">
-            <div class="comparison-images">
-                <div class="comp-image left" style="background-image: url('https://autotimegist.com/src/tesla-model-3-vs-bmw-i4-2026.webp');"></div>
-                <div class="vs-overlay">VS</div>
-                <span class="comp-badge">Performance EVs</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/tesla-model-3-vs-bmw-i4-2026">Tesla Model 3 vs BMW i4 2026: Performance EVs</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/tesla-model-3-vs-bmw-i4-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- RAV4 vs Grand Highlander -->
-        <div class="comparison-card">
-            <div class="comparison-images">
-                <div class="comp-image left" style="background-image: url('https://autotimegist.com/src/toyota-rav4-vs-grand-highlander-2026.webp');"></div>
-                <div class="vs-overlay">VS</div>
-                <span class="comp-badge">Toyota SUVs</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/toyota-rav4-vs-grand-highlander-2026">Toyota RAV4 Hybrid vs Grand Highlander 2026</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/toyota-rav4-vs-grand-highlander-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mach-E vs Equinox EV -->
-        <div class="comparison-card">
-            <div class="comparison-images">
-                <div class="comp-image left" style="background-image: url('https://autotimegist.com/src/ford-mach-e-vs-chevy-equinox-ev-2026.webp');"></div>
-                <div class="vs-overlay">VS</div>
-                <span class="comp-badge">Electric SUVs</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/ford-mach-e-vs-chevy-equinox-ev-2026">Ford Mach-E vs Chevy Equinox EV 2026</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/ford-mach-e-vs-chevy-equinox-ev-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Best Hybrid SUVs Top 5 -->
-        <div class="comparison-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-hybrid-suvs-2026-top-5.webp'); height: 160px;">
-                <span class="card-badge">TOP 5</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/best-hybrid-suvs-2026-top-5">2026 Best Hybrid SUVs: Top 5 Models Compared</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/best-hybrid-suvs-2026-top-5" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Model 3 vs i4 (second) -->
-        <div class="comparison-card">
-            <div class="comparison-images">
-                <div class="comp-image left" style="background-image: url('https://autotimegist.com/src/tesla-model-y-vs-kia-ev9-2026.webp');"></div>
-                <div class="vs-overlay">VS</div>
-                <span class="comp-badge">Performance EVs</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026">Tesla Model Y vs Kia EV9 2026: Best Electric SUV</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2026 Hybrid vs Electric -->
-        <div class="comparison-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/hybrid-vs-electric-savings-2026.webp'); height: 160px;">
-                <span class="card-badge">COST ANALYSIS</span>
-            </div>
-            <div class="comp-content">
-                <div class="comp-meta">
-                    <span><i class="far fa-calendar"></i> Feb 17</span>
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/cynthia-ebony">Cynthia Ebony</a></span>
-                </div>
-                <h3 class="comp-title"><a href="https://autotimegist.com/hybrid-vs-electric-savings-2026">2026 Hybrid vs Electric: Which Powertrain Saves More</a></h3>
-                <div class="comp-footer">
-                    <a href="https://autotimegist.com/hybrid-vs-electric-savings-2026" class="read-more">Read Comparison <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- BUYING GUIDES SECTION (8 guides) -->
-    <div class="section-header" style="margin-top: 2rem;">
-        <h2>Buying Guides</h2>
-        <a href="https://autotimegist.com/buying-guides" class="section-link">View All Guides <i class="fas fa-arrow-right"></i></a>
-    </div>
-
-    <div class="grid-4">
-        <!-- Best Electric Cars -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-electric-cars-2026-guide.webp');">
-                <span class="card-badge">EV GUIDE</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
+        <div class="story-grid">
+            <article class="story-card" data-category="hybrid">
+                <a class="story-thumb" href="https://autotimegist.com/bmw-550e-xdrive-2026-review">
+                    <img src="https://autotimegist.com/src/bmw-550e-xdrive-2026-review.webp" alt="2026 BMW 550e xDrive" loading="lazy">
+                    <span class="story-badge">Plug-in Hybrid</span>
+                    <span class="story-rating">9.0</span>
+                </a>
+                <p class="story-cat">In-Depth Review</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/bmw-550e-xdrive-2026-review">2026 BMW 550e xDrive Review: Luxury Plug-In Hybrid with Serious Power</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Mar 16</span>
                     <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/best-electric-cars-2026-guide">Best Electric Cars 2026: Complete EV Buying Guide</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/best-electric-cars-2026-guide" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+                </p>
+            </article>
+
+            <article class="story-card" data-category="ev">
+                <a class="story-thumb" href="https://autotimegist.com/porsche-cayenne-electric-2026-review">
+                    <img src="https://autotimegist.com/src/porsche-cayenne-electric-2026-review.webp" alt="2026 Porsche Cayenne Electric" loading="lazy">
+                    <span class="story-badge">Performance EV</span>
+                    <span class="story-rating">9.3</span>
+                </a>
+                <p class="story-cat">Review</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/porsche-cayenne-electric-2026-review">Porsche Cayenne Electric Review: How Good Is the 2026 Performance SUV?</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Mar 16</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
+                </p>
+            </article>
+
+            <article class="story-card" data-category="hybrid">
+                <a class="story-thumb" href="https://autotimegist.com/toyota-prius-prime-2026-review">
+                    <img src="https://autotimegist.com/src/toyota-prius-prime-2026-review.webp" alt="2026 Toyota Prius Prime" loading="lazy">
+                    <span class="story-badge">Hybrid</span>
+                    <span class="story-rating">9.1</span>
+                </a>
+                <p class="story-cat">Review</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/toyota-prius-prime-2026-review">Toyota Prius Prime Review: Why the 2026 Plug-In Hybrid Is So Popular</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Mar 16</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
+                </p>
+            </article>
+
+            <article class="story-card" data-category="suv">
+                <a class="story-thumb" href="https://autotimegist.com/subaru-forester-hybrid-2026-review">
+                    <img src="https://autotimegist.com/src/subaru-forester-hybrid-2026-review.webp" alt="2026 Subaru Forester Hybrid" loading="lazy">
+                    <span class="story-badge">Hybrid SUV</span>
+                    <span class="story-rating">8.8</span>
+                </a>
+                <p class="story-cat">Review</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/subaru-forester-hybrid-2026-review">Subaru Forester Hybrid Review (2026): The Most Reliable Compact SUV Yet?</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Mar 16</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
+                </p>
+            </article>
+
+            <article class="story-card" data-category="ev">
+                <a class="story-thumb" href="https://autotimegist.com/chevrolet-equinox-ev-2026-review">
+                    <img src="https://autotimegist.com/src/chevrolet-equinox-ev-2026-review.webp" alt="2026 Chevrolet Equinox EV" loading="lazy">
+                    <span class="story-badge">Affordable EV</span>
+                    <span class="story-rating">8.9</span>
+                </a>
+                <p class="story-cat">Review</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/chevrolet-equinox-ev-2026-review">Chevrolet Equinox EV 2026 Review: The Affordable Electric SUV Everyone Wants</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Mar 16</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
+                </p>
+            </article>
+
+            <article class="story-card" data-category="ev">
+                <a class="story-thumb" href="https://autotimegist.com/tesla-model-3-highland-2026-review">
+                    <img src="https://autotimegist.com/src/tesla-model-3-highland-2026-review.webp" alt="2026 Tesla Model 3 Highland" loading="lazy">
+                    <span class="story-badge">Electric Sedan</span>
+                    <span class="story-rating">9.2</span>
+                </a>
+                <p class="story-cat">Review</p>
+                <h3 class="story-title"><a href="https://autotimegist.com/tesla-model-3-highland-2026-review">Tesla Model 3 Highland Review: Is the 2026 Update Worth Buying?</a></h3>
+                <p class="story-meta">
+                    <span><i class="far fa-calendar"></i> Mar 16</span>
+                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/emmanuel-ik">Emmanuel IK</a></span>
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Comparisons -->
+    <section class="section wrap">
+        <div class="section-head">
+            <h2 class="section-title"><small>Two cars, one winner</small>Head-to-Head Comparisons</h2>
+            <a href="https://autotimegist.com/comparisons" class="section-link">View All Comparisons <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- Best Hybrid SUVs -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-hybrid-suvs-2026-under-50k.webp');">
-                <span class="card-badge">HYBRID SUVS</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+        <div class="vs-grid">
+            <a href="https://autotimegist.com/hyundai-ioniq-5-vs-6-2026" class="vs-card">
+                <div class="vs-media">
+                    <div class="vs-img" style="background-image:url('https://autotimegist.com/src/hyundai-ioniq-5-vs-6-2026.webp');"></div>
+                    <div class="vs-chip">VS</div>
+                    <span class="vs-tag">Hyundai EVs</span>
                 </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/best-hybrid-suvs-2026-under-50k">Best Hybrid SUVs 2026: Top Picks Under $50K</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/best-hybrid-suvs-2026-under-50k" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
+                <div class="vs-body">
+                    <h3 class="vs-title">Hyundai Ioniq 5 vs 6 2026: Which One to Buy</h3>
+                    <div class="vs-foot">
+                        <span><i class="far fa-user"></i> Cynthia Ebony</span>
+                        <span><i class="far fa-calendar"></i> Feb 17</span>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+            <a href="https://autotimegist.com/kia-ev6-vs-hyundai-ioniq-5-2026" class="vs-card">
+                <div class="vs-media">
+                    <div class="vs-img" style="background-image:url('https://autotimegist.com/src/kia-ev6-vs-hyundai-ioniq-5-2026.webp');"></div>
+                    <div class="vs-chip">VS</div>
+                    <span class="vs-tag">Sister Cars</span>
+                </div>
+                <div class="vs-body">
+                    <h3 class="vs-title">Kia EV6 vs Hyundai Ioniq 5 2026: Sister Cars Battle</h3>
+                    <div class="vs-foot">
+                        <span><i class="far fa-user"></i> Cynthia Ebony</span>
+                        <span><i class="far fa-calendar"></i> Feb 17</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://autotimegist.com/tesla-model-3-vs-bmw-i4-2026" class="vs-card">
+                <div class="vs-media">
+                    <div class="vs-img" style="background-image:url('https://autotimegist.com/src/tesla-model-3-vs-bmw-i4-2026.webp');"></div>
+                    <div class="vs-chip">VS</div>
+                    <span class="vs-tag">Performance EVs</span>
+                </div>
+                <div class="vs-body">
+                    <h3 class="vs-title">Tesla Model 3 vs BMW i4 2026: Performance EVs</h3>
+                    <div class="vs-foot">
+                        <span><i class="far fa-user"></i> Cynthia Ebony</span>
+                        <span><i class="far fa-calendar"></i> Feb 17</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://autotimegist.com/toyota-rav4-vs-grand-highlander-2026" class="vs-card">
+                <div class="vs-media">
+                    <div class="vs-img" style="background-image:url('https://autotimegist.com/src/toyota-rav4-vs-grand-highlander-2026.webp');"></div>
+                    <div class="vs-chip">VS</div>
+                    <span class="vs-tag">Toyota SUVs</span>
+                </div>
+                <div class="vs-body">
+                    <h3 class="vs-title">Toyota RAV4 Hybrid vs Grand Highlander 2026</h3>
+                    <div class="vs-foot">
+                        <span><i class="far fa-user"></i> Cynthia Ebony</span>
+                        <span><i class="far fa-calendar"></i> Feb 17</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://autotimegist.com/ford-mach-e-vs-chevy-equinox-ev-2026" class="vs-card">
+                <div class="vs-media">
+                    <div class="vs-img" style="background-image:url('https://autotimegist.com/src/ford-mach-e-vs-chevy-equinox-ev-2026.webp');"></div>
+                    <div class="vs-chip">VS</div>
+                    <span class="vs-tag">Electric SUVs</span>
+                </div>
+                <div class="vs-body">
+                    <h3 class="vs-title">Ford Mach-E vs Chevy Equinox EV 2026</h3>
+                    <div class="vs-foot">
+                        <span><i class="far fa-user"></i> Cynthia Ebony</span>
+                        <span><i class="far fa-calendar"></i> Feb 17</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://autotimegist.com/tesla-model-y-vs-kia-ev9-2026" class="vs-card">
+                <div class="vs-media">
+                    <div class="vs-img" style="background-image:url('https://autotimegist.com/src/tesla-model-y-vs-kia-ev9-2026.webp');"></div>
+                    <div class="vs-chip">VS</div>
+                    <span class="vs-tag">Electric SUVs</span>
+                </div>
+                <div class="vs-body">
+                    <h3 class="vs-title">Tesla Model Y vs Kia EV9 2026: Best Electric SUV</h3>
+                    <div class="vs-foot">
+                        <span><i class="far fa-user"></i> Cynthia Ebony</span>
+                        <span><i class="far fa-calendar"></i> Feb 17</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Buying Guides -->
+    <section class="section wrap">
+        <div class="section-head">
+            <h2 class="section-title"><small>Know before you buy</small>Buying Guides</h2>
+            <a href="https://autotimegist.com/buying-guides" class="section-link">View All Guides <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- First Time EV Buyer -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/first-time-ev-buyer-guide-2026.webp');">
-                <span class="card-badge">BEGINNER</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+        <div class="guide-grid">
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/best-electric-cars-2026-guide">
+                    <img src="https://autotimegist.com/src/best-electric-cars-2026-guide.webp" alt="Best Electric Cars 2026: Complete EV Buying Guide" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">EV Guide</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/best-electric-cars-2026-guide">Best Electric Cars 2026: Complete EV Buying Guide</a></h3>
+                    <div class="guide-author">Emmanuel IK</div>
                 </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/first-time-ev-buyer-guide-2026">First Time EV Buyer Guide 2026: Everything You Need</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/first-time-ev-buyer-guide-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/best-hybrid-suvs-2026-under-50k">
+                    <img src="https://autotimegist.com/src/best-hybrid-suvs-2026-under-50k.webp" alt="Best Hybrid SUVs 2026: Top Picks Under $50K" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Hybrid SUVs</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/best-hybrid-suvs-2026-under-50k">Best Hybrid SUVs 2026: Top Picks Under $50K</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
                 </div>
-            </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/best-hybrid-suvs-2026-top-5">
+                    <img src="https://autotimegist.com/src/best-hybrid-suvs-2026-top-5.webp" alt="2026 Best Hybrid SUVs: Top 5 Models Compared" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Top 5</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/best-hybrid-suvs-2026-top-5">2026 Best Hybrid SUVs: Top 5 Models Compared</a></h3>
+                    <div class="guide-author">Cynthia Ebony</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/first-time-ev-buyer-guide-2026">
+                    <img src="https://autotimegist.com/src/first-time-ev-buyer-guide-2026.webp" alt="First Time EV Buyer Guide 2026: Everything You Need" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Beginner</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/first-time-ev-buyer-guide-2026">First Time EV Buyer Guide 2026: Everything You Need</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/best-family-cars-2026-hybrid-electric">
+                    <img src="https://autotimegist.com/src/best-family-cars-2026-hybrid-electric.webp" alt="Best Family Cars 2026: Hybrid and Electric Options" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Family Cars</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/best-family-cars-2026-hybrid-electric">Best Family Cars 2026: Hybrid and Electric Options</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/choose-between-hybrid-ev-2026">
+                    <img src="https://autotimegist.com/src/choose-between-hybrid-ev-2026.webp" alt="How to Choose Between Hybrid and EV in 2026" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Decision Guide</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/choose-between-hybrid-ev-2026">How to Choose Between Hybrid and EV in 2026</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/hybrid-vs-electric-savings-2026">
+                    <img src="https://autotimegist.com/src/hybrid-vs-electric-savings-2026.webp" alt="2026 Hybrid vs Electric: Which Powertrain Saves More" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Cost Analysis</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/hybrid-vs-electric-savings-2026">2026 Hybrid vs Electric: Which Powertrain Saves More</a></h3>
+                    <div class="guide-author">Cynthia Ebony</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/best-used-electric-cars-2026-cpo">
+                    <img src="https://autotimegist.com/src/best-used-electric-cars-2026-cpo.webp" alt="Best Used Electric Cars 2026: Certified Pre-Owned EVs" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Used EVs</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/best-used-electric-cars-2026-cpo">Best Used Electric Cars 2026: Certified Pre-Owned EVs</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/ev-charging-guide-2026-home-vs-public">
+                    <img src="https://autotimegist.com/src/ev-charging-guide-2026-home-vs-public.webp" alt="2026 EV Charging Guide: Home vs Public Charging" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Charging</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/ev-charging-guide-2026-home-vs-public">2026 EV Charging Guide: Home vs Public Charging</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/best-electric-trucks-2026-guide">
+                    <img src="https://autotimegist.com/src/best-electric-trucks-2026-guide.webp" alt="Best Electric Trucks 2026: Buyer's Complete Guide" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Electric Trucks</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/best-electric-trucks-2026-guide">Best Electric Trucks 2026: Buyer's Complete Guide</a></h3>
+                    <div class="guide-author">Charity Ozor</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Maintenance -->
+    <section class="section wrap">
+        <div class="section-head">
+            <h2 class="section-title"><small>Keep it running</small>Maintenance Tips</h2>
+            <a href="https://autotimegist.com/maintenance-tips" class="section-link">View All Tips <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- Best Family Cars -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-family-cars-2026-hybrid-electric.webp');">
-                <span class="card-badge">FAMILY CARS</span>
+        <div class="guide-grid">
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/ev-maintenance-2026-guide">
+                    <img src="https://autotimegist.com/src/ev-maintenance-2026-guide.webp" alt="Electric Vehicle Maintenance 2026: Complete Care Guide" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">EV Care</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/ev-maintenance-2026-guide">Electric Vehicle Maintenance 2026: Complete Care Guide</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/hybrid-maintenance-ev-battery-care-2026">
+                    <img src="https://autotimegist.com/src/hybrid-maintenance-ev-battery-care-2026.webp" alt="Hybrid Car Maintenance Tips: EV Battery Care 2026" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Hybrid Care</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/hybrid-maintenance-ev-battery-care-2026">Hybrid Car Maintenance Tips: EV Battery Care 2026</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/diy-car-maintenance-2026-save-money">
+                    <img src="https://autotimegist.com/src/diy-car-maintenance-2026-save-money.webp" alt="DIY Car Maintenance 2026: Save Money on Repairs" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">DIY</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/diy-car-maintenance-2026-save-money">DIY Car Maintenance 2026: Save Money on Repairs</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/essential-car-maintenance-checklist-2026">
+                    <img src="https://autotimegist.com/src/essential-car-maintenance-checklist-2026.webp" alt="Essential Car Maintenance Checklist for 2026" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Checklist</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/essential-car-maintenance-checklist-2026">Essential Car Maintenance Checklist for 2026</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/winter-car-maintenance-2026-guide">
+                    <img src="https://autotimegist.com/src/winter-car-maintenance-2026-guide.webp" alt="Winter Car Maintenance 2026: Cold Weather Prep Guide" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Winter Prep</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/winter-car-maintenance-2026-guide">Winter Car Maintenance 2026: Cold Weather Prep Guide</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/ev-battery-health-tips-2026">
+                    <img src="https://autotimegist.com/src/ev-battery-health-tips-2026.webp" alt="EV Battery Health Tips: Extend Range and Longevity 2026" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Battery</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/ev-battery-health-tips-2026">EV Battery Health Tips: Extend Range and Longevity 2026</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/oil-change-guide-2026-synthetic-vs-conventional">
+                    <img src="https://autotimegist.com/src/oil-change-guide-2026-synthetic-vs-conventional.webp" alt="2026 Oil Change Guide: Synthetic vs Conventional" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">DIY</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/oil-change-guide-2026-synthetic-vs-conventional">2026 Oil Change Guide: Synthetic vs Conventional</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+            <article class="guide-card">
+                <a class="guide-thumb" href="https://autotimegist.com/dashboard-warning-lights-explained-2026">
+                    <img src="https://autotimegist.com/src/dashboard-warning-lights-explained-2026.webp" alt="Modern Car Dashboard Warning Lights Explained 2026" loading="lazy">
+                </a>
+                <div class="guide-body">
+                    <div class="guide-cat">Troubleshooting</div>
+                    <h3 class="guide-title"><a href="https://autotimegist.com/dashboard-warning-lights-explained-2026">Modern Car Dashboard Warning Lights Explained 2026</a></h3>
+                    <div class="guide-author">Blessing Ann</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-band">
+        <div class="newsletter-inner">
+            <div>
+                <h2>Stay in the driver's seat</h2>
+                <p>Get the latest reviews, news, and buying guides delivered straight to your inbox — no spam, just cars.</p>
             </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/best-family-cars-2026-hybrid-electric">Best Family Cars 2026: Hybrid and Electric Options</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/best-family-cars-2026-hybrid-electric" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="newsletter-note"></div>
             </div>
         </div>
+    </section>
 
-        <!-- Choose Between Hybrid and EV -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/choose-between-hybrid-ev-2026.webp');">
-                <span class="card-badge">DECISION GUIDE</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">AutoTimegist</div>
+                    <p style="color:var(--ink-soft); max-width:320px; font-size:0.92rem;">Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
                 </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/choose-between-hybrid-ev-2026">How to Choose Between Hybrid and EV in 2026</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/choose-between-hybrid-ev-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://autotimegist.com/">Home</a></li>
+                        <li><a href="https://autotimegist.com/about">About Us</a></li>
+                        <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                        <li><a href="https://autotimegist.com/editorial-policy">Editorial Policy</a></li>
+                        <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-
-        <!-- Best Used EVs -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-used-electric-cars-2026-cpo.webp');">
-                <span class="card-badge">USED EVS</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                        <li><a href="https://autotimegist.com/news">News & Updates</a></li>
+                        <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                        <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                        <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                    </ul>
                 </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/best-used-electric-cars-2026-cpo">Best Used Electric Cars 2026: Certified Pre-Owned EVs</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/best-used-electric-cars-2026-cpo" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- EV Charging Guide -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/ev-charging-guide-2026-home-vs-public.webp');">
-                <span class="card-badge">CHARGING</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/ev-charging-guide-2026-home-vs-public">2026 EV Charging Guide: Home vs Public Charging</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/ev-charging-guide-2026-home-vs-public" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
+                <div class="footer-col">
+                    <h4>Share</h4>
+                    <ul>
+                        <li><a href="#" data-share="x">X / Twitter</a></li>
+                        <li><a href="#" data-share="facebook">Facebook</a></li>
+                        <li><a href="#" data-share="whatsapp">WhatsApp</a></li>
+                        <li><a href="#" data-share="copy">Copy link</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <!-- Best Electric Trucks -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/best-electric-trucks-2026-guide.webp');">
-                <span class="card-badge">ELECTRIC TRUCKS</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/charity-ozor">Charity Ozor</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/best-electric-trucks-2026-guide">Best Electric Trucks 2026: Buyer's Complete Guide</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/best-electric-trucks-2026-guide" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        
-    </div>
-
-    <!-- MAINTENANCE TIPS SECTION (8 guides) -->
-    <div class="section-header" style="margin-top: 2rem;">
-        <h2>Maintenance Tips & Guides</h2>
-        <a href="https://autotimegist.com/maintenance-tips" class="section-link">View All Tips <i class="fas fa-arrow-right"></i></a>
-    </div>
-
-    <div class="grid-4">
-        <!-- EV Maintenance -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/ev-maintenance-2026-guide.webp');">
-                <span class="card-badge">EV CARE</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/ev-maintenance-2026-guide">Electric Vehicle Maintenance 2026: Complete Care Guide</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/ev-maintenance-2026-guide" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Hybrid Battery Care -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/hybrid-maintenance-ev-battery-care-2026.webp');">
-                <span class="card-badge">HYBRID CARE</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/hybrid-maintenance-ev-battery-care-2026">Hybrid Car Maintenance Tips: EV Battery Care 2026</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/hybrid-maintenance-ev-battery-care-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- DIY Maintenance -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/diy-car-maintenance-2026-save-money.webp');">
-                <span class="card-badge">DIY</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/diy-car-maintenance-2026-save-money">DIY Car Maintenance 2026: Save Money on Repairs</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/diy-car-maintenance-2026-save-money" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Essential Checklist -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/essential-car-maintenance-checklist-2026.webp');">
-                <span class="card-badge">CHECKLIST</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/essential-car-maintenance-checklist-2026">Essential Car Maintenance Checklist for 2026</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/essential-car-maintenance-checklist-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Winter Maintenance -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/winter-car-maintenance-2026-guide.webp');">
-                <span class="card-badge">WINTER PREP</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/winter-car-maintenance-2026-guide">Winter Car Maintenance 2026: Cold Weather Prep Guide</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/winter-car-maintenance-2026-guide" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- EV Battery Health -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/ev-battery-health-tips-2026.webp');">
-                <span class="card-badge">BATTERY</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/ev-battery-health-tips-2026">EV Battery Health Tips: Extend Range and Longevity 2026</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/ev-battery-health-tips-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Oil Change Guide -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/oil-change-guide-2026-synthetic-vs-conventional.webp');">
-                <span class="card-badge">DIY</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/oil-change-guide-2026-synthetic-vs-conventional">2026 Oil Change Guide: Synthetic vs Conventional</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/oil-change-guide-2026-synthetic-vs-conventional" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dashboard Lights -->
-        <div class="content-card">
-            <div class="card-image" style="background-image: url('https://autotimegist.com/src/dashboard-warning-lights-explained-2026.webp');">
-                <span class="card-badge">TROUBLESHOOTING</span>
-            </div>
-            <div class="card-content">
-                <div class="card-meta">
-                    <span><i class="far fa-user"></i> <a href="https://autotimegist.com/authors/blessing-ann">Blessing Ann</a></span>
-                </div>
-                <h3 class="card-title"><a href="https://autotimegist.com/dashboard-warning-lights-explained-2026">Modern Car Dashboard Warning Lights Explained 2026</a></h3>
-                <div class="card-footer">
-                    <a href="https://autotimegist.com/dashboard-warning-lights-explained-2026" class="read-more">Read <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        
-    </div>
-
-    <!-- Newsletter Section -->
-    <div class="newsletter-section">
-        <h2>Stay in the Driver's Seat</h2>
-        <p>Get the latest reviews, news, and buying guides delivered directly to your inbox.</p>
-        <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Your email address" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About AutoTimegist</h3>
-                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
-                
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="https://autotimegist.com/">Home</a></li>
-                    <li><a href="https://autotimegist.com/about">About Us</a></li>
-                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
-                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
-                    <li><a href="#">Advertise</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Categories</h3>
-                <ul>
-                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
-                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
-                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
-                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
-                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
-                </ul>
-            </div>
-            
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+            <span>&copy; 2026 AutoTimegist. All rights reserved.</span>
+            <span>Built for the drive.</span>
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
+    <button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    <script src="assets/js/search-index.js"></script>
 
-        document.addEventListener('click', (e) => {
-            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
-
-        const newsletterForm = document.getElementById('newsletterForm');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for subscribing!');
-                newsletterForm.reset();
-            });
-        }
-
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = 'var(--white)';
-                header.style.backdropFilter = 'none';
-            }
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

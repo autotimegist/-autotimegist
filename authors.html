@@ -36,9 +36,10 @@
     <link rel="icon" type="image/x-icon" href="https://autotimegist.com/favicon.ico">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
     
 
 <!-- Google tag (gtag.js) -->
@@ -72,590 +73,33 @@
         }]
     }
     </script>
-    
-    <style>
-        /* Only minimal authors-page-specific styling - all mobile safe */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #e63946;
-            --secondary-color: #1e1e2f;
-            --accent-color: #ffb347;
-            --text-dark: #2d3436;
-            --text-light: #636e72;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 5px 15px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background: var(--bg-light);
-        }
-
-        /* Header Styles (same as homepage) */
-        .header {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--primary-color);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: var(--bg-light);
-            border-radius: 30px;
-            padding: 0.5rem 1rem;
-        }
-
-        .search-box input {
-            border: none;
-            background: transparent;
-            padding: 0.3rem;
-            outline: none;
-        }
-
-        .search-box i {
-            color: var(--text-light);
-            cursor: pointer;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Main Authors Content */
-        .authors-container {
-            max-width: 1400px;
-            margin: 100px auto 2rem;
-            padding: 0 2rem;
-        }
-
-        .authors-hero {
-            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
-            color: var(--white);
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            margin-bottom: 3rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .authors-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .authors-hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            opacity: 0.95;
-        }
-
-        .team-stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin: 2rem 0 3rem;
-            padding: 1.5rem;
-            background: var(--white);
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-        }
-
-        .stat-item {
-            text-align: center;
-            min-width: 140px;
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .authors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .author-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .author-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .card-header {
-            padding: 2rem 2rem 1.5rem;
-            background: linear-gradient(135deg, var(--secondary-color), #2c3e50);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .author-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: var(--white);
-            margin-bottom: 1rem;
-            border: 4px solid var(--white);
-            overflow: hidden;
-        }
-
-        .author-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .author-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.3rem;
-        }
-
-        .author-title {
-            font-size: 0.9rem;
-            background: rgba(255,255,255,0.2);
-            padding: 0.2rem 1rem;
-            border-radius: 30px;
-            display: inline-block;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .author-bio {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .author-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .meta-item {
-            background: var(--bg-light);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .meta-item i {
-            color: var(--primary-color);
-        }
-
-        .expertise-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .expertise-tag {
-            background: var(--bg-light);
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .recent-articles {
-            margin-bottom: 1.5rem;
-        }
-
-        .recent-articles h4 {
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .article-preview {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--primary-color);
-        }
-
-        .article-preview a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .article-preview a:hover {
-            color: var(--primary-color);
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
-            border-top: 1px solid #eee;
-        }
-
-        .profile-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .profile-link:hover {
-            gap: 0.8rem;
-        }
-
-        .author-social {
-            display: flex;
-            gap: 0.8rem;
-        }
-
-        .author-social a {
-            color: var(--text-light);
-            transition: var(--transition);
-        }
-
-        .author-social a:hover {
-            color: var(--primary-color);
-        }
-
-        .pagination {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin: 3rem 0 2rem;
-        }
-
-        .page-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--white);
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-
-        .page-btn:hover, .page-btn.active {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .page-btn.next {
-            width: auto;
-            padding: 0 1.2rem;
-            border-radius: 30px;
-        }
-
-        .join-team {
-            background: linear-gradient(135deg, var(--bg-light), #e0e0e0);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            margin: 3rem 0;
-            text-align: center;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .join-team h2 {
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .join-team p {
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .join-btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 40px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .join-btn:hover {
-            background: #c72e3a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.3);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--primary-color);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #b2bec3;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: var(--shadow);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .search-box {
-                display: none;
-            }
-
-            .authors-hero h1 {
-                font-size: 2rem;
-            }
-
-            .authors-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .card-header {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .authors-container {
-                padding: 0 1rem;
-            }
-
-            .stat-item {
-                min-width: 100px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="https://autotimegist.com/" class="logo">Auto<span>Timegist</span></a>
-            
-            <ul class="nav-menu" id="navMenu">
+        <header class="site-header">
+        <div class="header-inner">
+            <a href="https://autotimegist.com/" class="brand"><span class="brand-mark">AT</span> AutoTimegist</a>
+
+            <ul class="main-nav">
                 <li><a href="https://autotimegist.com/">Home</a></li>
                 <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
                 <li><a href="https://autotimegist.com/news">News</a></li>
                 <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
                 <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
-                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance</a></li>
             </ul>
 
-            <div class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search"><i class="fas fa-magnifying-glass"></i></button>
+                <button class="icon-btn mobile-toggle" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
             </div>
+        </div>
+        <nav class="mobile-nav">
+            <a href="https://autotimegist.com/">Home</a>
+            <a href="https://autotimegist.com/reviews">Reviews</a>
+            <a href="https://autotimegist.com/news">News</a>
+            <a href="https://autotimegist.com/comparisons">Comparisons</a>
+            <a href="https://autotimegist.com/buying-guides">Buying Guides</a>
+            <a href="https://autotimegist.com/maintenance-tips">Maintenance</a>
         </nav>
     </header>
 
@@ -822,65 +266,54 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About AutoTimegist</h3>
-                <p>Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
-                
+        <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">AutoTimegist</div>
+                    <p style="color:var(--ink-soft); max-width:320px; font-size:0.92rem;">Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://autotimegist.com/">Home</a></li>
+                        <li><a href="https://autotimegist.com/about">About Us</a></li>
+                        <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                        <li><a href="https://autotimegist.com/editorial-policy">Editorial Policy</a></li>
+                        <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                        <li><a href="https://autotimegist.com/news">News &amp; Updates</a></li>
+                        <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                        <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                        <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Share</h4>
+                    <ul>
+                        <li><a href="#" data-share="x">X / Twitter</a></li>
+                        <li><a href="#" data-share="facebook">Facebook</a></li>
+                        <li><a href="#" data-share="whatsapp">WhatsApp</a></li>
+                        <li><a href="#" data-share="copy">Copy link</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="https://autotimegist.com/">Home</a></li>
-                    <li><a href="https://autotimegist.com/about">About Us</a></li>
-                    <li><a href="https://autotimegist.com/contact">Contact</a></li>
-                    <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
-                    <li><a href="#">Advertise</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Categories</h3>
-                <ul>
-                <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
-                <li><a href="https://autotimegist.com/news">News & Updates</a></li>
-                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
-                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
-                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
-                </ul>
-            </div>
-            
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 AutoTimegist. All rights reserved.</p>
+            <span>&copy; 2026 AutoTimegist. All rights reserved.</span>
+            <span>Built for the drive.</span>
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
+    <button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
-
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = 'var(--white)';
-                header.style.backdropFilter = 'none';
-            }
-        });
-    </script>
+    <script src="assets/js/search-index.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Page Not Found (404) | AutoTimegist</title>
+    <meta name="description" content="The page you were looking for could not be found. Search AutoTimegist or browse our latest car reviews, news, comparisons, buying guides and maintenance tips.">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:site_name" content="AutoTimegist">
+    <meta property="og:title" content="Page Not Found (404) | AutoTimegist">
+    <meta property="og:description" content="That page has moved or no longer exists. Search the site or browse the latest automotive coverage.">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <style>
+        /* 404-specific layout, scoped to this page only */
+        .error-wrap {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 4.5rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .error-code {
+            font-family: var(--font-display);
+            font-size: clamp(5rem, 18vw, 10rem);
+            font-weight: 700;
+            line-height: 0.9;
+            color: var(--ink);
+            letter-spacing: -0.03em;
+        }
+
+        .error-code span { color: var(--signal); }
+
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 700;
+            margin: 1rem 0 0.8rem;
+        }
+
+        .error-text {
+            color: var(--ink-soft);
+            max-width: 540px;
+            margin: 0 auto 2rem;
+        }
+
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .error-routes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            text-align: left;
+            border-top: 1px solid var(--line);
+            padding-top: 2.5rem;
+        }
+
+        .error-route {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            padding: 1.1rem;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--ink);
+            transition: border-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .error-route:hover { border-color: var(--ink); transform: translateY(-2px); }
+
+        .error-route i { color: var(--signal); font-size: 1.1rem; width: 20px; text-align: center; }
+        .error-route strong { display: block; font-family: var(--font-display); font-size: 0.95rem; }
+        .error-route span { font-size: 0.8rem; color: var(--muted); }
+
+        @media (max-width: 768px) {
+            .error-wrap { padding: 3rem 1.25rem 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="https://autotimegist.com/" class="brand"><span class="brand-mark">AT</span> AutoTimegist</a>
+
+            <ul class="main-nav">
+                <li><a href="https://autotimegist.com/">Home</a></li>
+                <li><a href="https://autotimegist.com/reviews">Reviews</a></li>
+                <li><a href="https://autotimegist.com/news">News</a></li>
+                <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                <li><a href="https://autotimegist.com/maintenance-tips">Maintenance</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search"><i class="fas fa-magnifying-glass"></i></button>
+                <button class="icon-btn mobile-toggle" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <a href="https://autotimegist.com/">Home</a>
+            <a href="https://autotimegist.com/reviews">Reviews</a>
+            <a href="https://autotimegist.com/news">News</a>
+            <a href="https://autotimegist.com/comparisons">Comparisons</a>
+            <a href="https://autotimegist.com/buying-guides">Buying Guides</a>
+            <a href="https://autotimegist.com/maintenance-tips">Maintenance</a>
+        </nav>
+    </header>
+
+    <main class="error-wrap">
+        <div class="error-code">4<span>0</span>4</div>
+        <h1 class="error-title">This page took a wrong turn</h1>
+        <p class="error-text">The page you were looking for has moved, been renamed, or never existed. Nothing is broken on your end. Try a search, or pick up from one of the sections below.</p>
+
+        <div class="error-actions">
+            <button class="btn btn-accent" aria-label="Search"><i class="fas fa-magnifying-glass"></i> Search the site</button>
+            <a href="https://autotimegist.com/" class="btn btn-outline">Back to homepage</a>
+        </div>
+
+        <div class="error-routes">
+            <a class="error-route" href="https://autotimegist.com/reviews">
+                <i class="fas fa-star"></i>
+                <span><strong>Car Reviews</strong><span>Road tests and verdicts</span></span>
+            </a>
+            <a class="error-route" href="https://autotimegist.com/news">
+                <i class="fas fa-newspaper"></i>
+                <span><strong>News</strong><span>Today's industry stories</span></span>
+            </a>
+            <a class="error-route" href="https://autotimegist.com/comparisons">
+                <i class="fas fa-scale-balanced"></i>
+                <span><strong>Comparisons</strong><span>Head-to-head tests</span></span>
+            </a>
+            <a class="error-route" href="https://autotimegist.com/buying-guides">
+                <i class="fas fa-compass"></i>
+                <span><strong>Buying Guides</strong><span>Know before you buy</span></span>
+            </a>
+            <a class="error-route" href="https://autotimegist.com/maintenance-tips">
+                <i class="fas fa-wrench"></i>
+                <span><strong>Maintenance</strong><span>Keep it running</span></span>
+            </a>
+            <a class="error-route" href="https://autotimegist.com/contact">
+                <i class="fas fa-envelope"></i>
+                <span><strong>Report a broken link</strong><span>Tell us what you expected</span></span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">AutoTimegist</div>
+                    <p style="color:var(--ink-soft); max-width:320px; font-size:0.92rem;">Your trusted source for professional car reviews, automotive news, buying guides, comparisons and maintenance tips.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://autotimegist.com/">Home</a></li>
+                        <li><a href="https://autotimegist.com/about">About Us</a></li>
+                        <li><a href="https://autotimegist.com/contact">Contact</a></li>
+                        <li><a href="https://autotimegist.com/editorial-policy">Editorial Policy</a></li>
+                        <li><a href="https://autotimegist.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://autotimegist.com/terms-of-use">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="https://autotimegist.com/reviews">Car Reviews</a></li>
+                        <li><a href="https://autotimegist.com/news">News &amp; Updates</a></li>
+                        <li><a href="https://autotimegist.com/comparisons">Comparisons</a></li>
+                        <li><a href="https://autotimegist.com/buying-guides">Buying Guides</a></li>
+                        <li><a href="https://autotimegist.com/maintenance-tips">Maintenance Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Share</h4>
+                    <ul>
+                        <li><a href="#" data-share="x">X / Twitter</a></li>
+                        <li><a href="#" data-share="facebook">Facebook</a></li>
+                        <li><a href="#" data-share="whatsapp">WhatsApp</a></li>
+                        <li><a href="#" data-share="copy">Copy link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 AutoTimegist. All rights reserved.</span>
+            <span>Built for the drive.</span>
+        </div>
+    </footer>
+
+    <button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="/assets/js/search-index.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
