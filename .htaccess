@@ -1,0 +1,15 @@
+# =============================================================================
+#  AutoTimegist - Apache / LiteSpeed configuration
+# =============================================================================
+
+# --- Custom error page -------------------------------------------------------
+ErrorDocument 404 /404.html
+
+
+# --- Retired author profiles -------------------------------------------------
+# The editorial team was consolidated from five bylines to two. These three
+# profile URLs were indexed by Google, so they are permanently redirected to
+# the editor who took over that beat rather than left to 404.
+Redirect 301 /authors/cynthia-ebony  https://autotimegist.com/authors/emmanuel-ik
+Redirect 301 /authors/blessing-ann   https://autotimegist.com/authors/emmanuel-ik
+Redirect 301 /authors/charity-ozor   https://autotimegist.com/authors/shedrack-olisa
